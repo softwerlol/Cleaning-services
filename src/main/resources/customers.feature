@@ -21,7 +21,7 @@ Feature: customers feature
 
   Scenario: customers sign up with valid password
     Given   customers enter password "Aahmad@1234"
-    When    save patient password "Aahmad@1234" validation
+    When    save customers password "Aahmad@1234" validation
     Then    customers password is valid
 
   Scenario: customers sign up with invalid password
