@@ -1,23 +1,40 @@
+package test.pac;
+
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class customer {
+    customer c0 = new customer();
+    Address address0;
+    private Application app;
 
+    public customer(Application app) {
+        this.app = app;
+    }
     @Given("that those customers are registered in the system")
     public void that_those_customers_are_registered_in_the_system(io.cucumber.datatable.DataTable dataTable) {
-        // Write code here that turns the phrase above into concrete actions
-        // For automatic transformation, change DataTable to one of
-        // E, List<E>, List<List<E>>, List<Map<K,V>>, Map<K,V> or
-        // Map<K, List<V>>. E,K,V must be a String, Integer, Float,
-        // Double, Byte, Short, Long, BigInteger or BigDecimal.
-        //
-        // For other transformations you can register a DataTableType.
-      //  throw new io.cucumber.java.PendingException();
+        for (int i = 0; i < dataTable.height(); i++) {
+            c0.validUsername(dataTable.row(i).get(0), "c");
+            c0.validPassword(dataTable.row(i).get(1));
+            c0.validEmail(dataTable.row(i).get(5));
+            c0.validMobileNumber(dataTable.row(i).get(6));
+            if (c0.getcustomers()[0] && c0.getcustomers()[1] && c0.getcustomers()[2] && c0.getcustomers()[3]) {
+                c0 = new customers(dataTable.row(i).get(0), dataTable.row(i).get(1), dataTable.row(i).get(5),
+                        dataTable.row(i).get(6));
+                c0.getcustomers()[4] = true;
+                c0.getcustomers()[5] = false;
+                app.getPcustomers().add(c0);
+            }
+
+        }
     }
 
-    @Given("patient enter username {string}")
-    public void patient_enter_username(String string) {
+    @Given("customers enter username {string}")
+    public void customers_enter_username(String string) {
         // Write code here that turns the phrase above into concrete actions
      //   throw new io.cucumber.java.PendingException();
     }
@@ -163,6 +180,7 @@ public class customer {
     @Then("customers is not sign in")
     public void customers_is_not_sign_in() {
         // Write code here that turns the phrase above into concrete actions
+
        // throw new io.cucumber.java.PendingException();
     }
 

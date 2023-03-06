@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="209daf62-714a-403c-ae7f-dee4fbe5f6c9" name="Changes" comment="test" />
+    <list default="true" id="209daf62-714a-403c-ae7f-dee4fbe5f6c9" name="Changes" comment="test">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/customers.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/customers.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Tester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tester.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cucumber/wikipedia.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/cucumber/wikipedia.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Tester.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Tester.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/customer.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,7 +28,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="Ahmad" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -78,8 +86,8 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
     &quot;two.files.diff.last.used.file&quot;: &quot;C:/Users/ahmdq/IdeaProjects/rstG/src/test/java/Test1.java&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
@@ -93,7 +101,7 @@
     ]
   }
 }</component>
-  <component name="RunManager" selected="Cucumber Java.Feature: invoice">
+  <component name="RunManager" selected="Cucumber Java.Feature: customers">
     <configuration name="Feature: customers" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/main/resources/customers.feature" />
@@ -119,25 +127,6 @@
       <module name="Cleaning-services" />
       <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
       <option name="SUGGESTED_NAME" value="Feature: invoice" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.cucumber.core.cli.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Scenario: The system has a set of invoices" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/main/resources/invoice.feature" />
-      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
-      <module name="Cleaning-services" />
-      <option name="NAME_FILTER" value="^The system has a set of invoices$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^The system has a set of invoices$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: The system has a set of invoices" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -187,6 +176,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Tester" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Cleaning-services" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Tester" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <module name="Cleaning services" />
       <method v="2">
@@ -202,11 +200,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Cucumber Java.Feature: invoice" />
         <item itemvalue="Cucumber Java.Feature: customers" />
+        <item itemvalue="JUnit.Tester" />
+        <item itemvalue="Cucumber Java.Feature: invoice" />
         <item itemvalue="Cucumber Java.Scenario: customers sign up with valid username" />
         <item itemvalue="Cucumber Java.Scenario: customers sign up with invalid username" />
-        <item itemvalue="Cucumber Java.Scenario: The system has a set of invoices" />
       </list>
     </recent_temporary>
   </component>
@@ -228,7 +226,10 @@
       <workItem from="1677936170746" duration="1018000" />
       <workItem from="1677937380735" duration="476000" />
       <workItem from="1677937892234" duration="6759000" />
-      <workItem from="1677951159016" duration="665000" />
+      <workItem from="1677951159016" duration="3866000" />
+      <workItem from="1678015884283" duration="2115000" />
+      <workItem from="1678037157646" duration="2395000" />
+      <workItem from="1678090225511" duration="2945000" />
     </task>
     <task id="LOCAL؜-٠٠٠٠١" summary="test">
       <created>1677948720062</created>
@@ -258,7 +259,21 @@
       <option name="project" value="LOCAL؜" />
       <updated>1677951579291</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL؜-٠٠٠٠٥" summary="test">
+      <created>1677951849302</created>
+      <option name="number" value="٠٠٠٠٥" />
+      <option name="presentableId" value="LOCAL؜-٠٠٠٠٥" />
+      <option name="project" value="LOCAL؜" />
+      <updated>1677951849302</updated>
+    </task>
+    <task id="LOCAL؜-٠٠٠٠٦" summary="test">
+      <created>1678020156582</created>
+      <option name="number" value="٠٠٠٠٦" />
+      <option name="presentableId" value="LOCAL؜-٠٠٠٠٦" />
+      <option name="project" value="LOCAL؜" />
+      <updated>1678020156582</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -9,7 +9,7 @@ Feature: customers feature
       | c00005 | anas@00003 |1005|anasST|Nablus|anas@yahoo.com|0567799922|false |
 
   Scenario: customers sign up with valid username
-    Given   patient enter username "c12345"
+    Given   customers enter username "c12345"
     When    save customers username "c12345" validation
     Then    customers username is valid
 
