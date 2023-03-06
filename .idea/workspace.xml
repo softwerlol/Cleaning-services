@@ -4,9 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="209daf62-714a-403c-ae7f-dee4fbe5f6c9" name="Changes" comment="test">
-      <change beforePath="$PROJECT_DIR$/src/test/java/customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/customers.feature" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/customers.feature" afterDir="false" />
+    <list default="true" id="209daf62-714a-403c-ae7f-dee4fbe5f6c9" name="Changes" comment="test1">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/app/Address.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/app/Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/app/CalendarAppointment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/app/Customers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/app/Invoice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/app/Services.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/app/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/app/Worker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/customersTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/invoice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/invoice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cucumber/wikipedia.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/cucumber/wikipedia.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/customer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/invoice.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/invoice.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,37 +79,56 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;ToolWindowGit.ShowToolbar&quot;: &quot;false&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/ahmdq/eclipse-workspace/Cleaning-services&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
-    &quot;two.files.diff.last.used.file&quot;: &quot;C:/Users/ahmdq/IdeaProjects/rstG/src/test/java/Test1.java&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "ToolWindowGit.ShowToolbar": "false",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/ahmdq/eclipse-workspace/Cleaning-services",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
+    "two.files.diff.last.used.file": "C:/Users/ahmdq/IdeaProjects/rstG/src/test/java/Test1.java",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;ChangesTree.GroupingKeys&quot;: [
-      &quot;module&quot;
+  "keyToStringList": {
+    "ChangesTree.GroupingKeys": [
+      "module"
     ],
-    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
-      &quot;PLAIN_TEXT&quot;
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "PLAIN_TEXT"
     ]
   }
-}</component>
-  <component name="RunManager" selected="Cucumber Java.Feature: customers">
+}]]></component>
+  <component name="RunManager" selected="Cucumber Java.All Features in: Cleaning services">
+    <configuration name="All Features in: Cleaning services" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="Cleaning-services" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
+      <option name="SUGGESTED_NAME" value="All Features in: Cleaning services" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Feature: customers" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/main/resources/customers.feature" />
@@ -133,40 +165,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: customers sign up with invalid username" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/main/resources/customers.feature" />
-      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+    <configuration name="All in Cleaning-services" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Cleaning-services" />
-      <option name="NAME_FILTER" value="^customers sign up with invalid username$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^customers sign up with invalid username$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: customers sign up with invalid username" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.cucumber.core.cli.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Scenario: customers sign up with valid username" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/main/resources/customers.feature" />
-      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
-      <module name="Cleaning-services" />
-      <option name="NAME_FILTER" value="^customers sign up with valid username$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^customers sign up with valid username$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: customers sign up with valid username" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.cucumber.core.cli.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -195,11 +197,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Cucumber Java.All Features in: Cleaning services" />
+        <item itemvalue="JUnit.All in Cleaning-services" />
         <item itemvalue="Cucumber Java.Feature: customers" />
         <item itemvalue="JUnit.Tester" />
         <item itemvalue="Cucumber Java.Feature: invoice" />
-        <item itemvalue="Cucumber Java.Scenario: customers sign up with valid username" />
-        <item itemvalue="Cucumber Java.Scenario: customers sign up with invalid username" />
       </list>
     </recent_temporary>
   </component>
@@ -224,7 +226,9 @@
       <workItem from="1677951159016" duration="3866000" />
       <workItem from="1678015884283" duration="2115000" />
       <workItem from="1678037157646" duration="2395000" />
-      <workItem from="1678090225511" duration="3536000" />
+      <workItem from="1678090225511" duration="4224000" />
+      <workItem from="1678111328639" duration="3108000" />
+      <workItem from="1678115065130" duration="14012000" />
     </task>
     <task id="LOCAL؜-٠٠٠٠١" summary="test">
       <created>1677948720062</created>
@@ -282,7 +286,14 @@
       <option name="project" value="LOCAL؜" />
       <updated>1678093634396</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL؜-٠٠٠٠٩" summary="test1">
+      <created>1678093870542</created>
+      <option name="number" value="٠٠٠٠٩" />
+      <option name="presentableId" value="LOCAL؜-٠٠٠٠٩" />
+      <option name="project" value="LOCAL؜" />
+      <updated>1678093870542</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -399,6 +410,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="bbb" />
     <MESSAGE value="test" />
-    <option name="LAST_COMMIT_MESSAGE" value="test" />
+    <MESSAGE value="test1" />
+    <option name="LAST_COMMIT_MESSAGE" value="test1" />
   </component>
 </project>
