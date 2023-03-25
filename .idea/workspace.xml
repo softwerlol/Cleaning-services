@@ -6,26 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="209daf62-714a-403c-ae7f-dee4fbe5f6c9" name="Changes" comment="test1a">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/Admin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/Customer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/MainInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/MainInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/Secretary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/Secretary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/Service.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/Users.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/Worker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/Worker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/app/AddOrdertest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/app/AddOrdertest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/app/EditOrdertest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/app/EditOrdertest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/app/Invoicetest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/app/Invoicetest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/app/Reporttest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/app/Reporttest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/app/Visittest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/app/Visittest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app/Admin.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/Admin.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/Customer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app/MainInterface.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app/Order.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/Order.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app/Secretary.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/Secretary.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app/Service.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/Service.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app/Users.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/Users.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app/Worker.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/Worker.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -212,8 +212,8 @@ public class MainInterface {
             System.out.println("\t\t\tWelcome W. " + users.get(userIndex).userName);
             System.out.println(separate);
             System.out.println("1. Show Customers List");
-            //System.out.println("2. Show Order");
-            //System.out.println("3. Change Order Status");
+            System.out.println("2. Show Order");
+            System.out.println("3. Change Order Status");
             System.out.println("4. Sign Out");
             System.out.println(selectOption);
             int select = scan.nextInt();
@@ -253,19 +253,22 @@ public class MainInterface {
                 case 4:
                     System.out.println(logOut);
                     scan.nextLine();
-                    //return;
-               /* case 2:
+                    return;
+                case 2:
                     i = 1;
-                    appIndex.clear();
+
                     System.out.println(orderList);
                     System.out.println(separate2);
                     for (int j = 0; j < record.getOrders().size(); j++) {
-                        if (record.getCustomers().get(j).equals(customer) && record.getType().get(j).equals(1)) {
-                            System.out.println(i++ + ". " + record.getOrders().get(j).getDay() + "/" +
-                                    record.getOrders().get(j).getMonth() + "/" + record.getOrders().get(j).getYear() +
-                                    timeString + record.getOrders().get(j).getTime()  +record.getOrders().get(j).getStatus());
-                            appIndex.add(j);
-                        }
+
+                            System.out.println(i++ + ". " + record.getOrders().get(j).getDay()+"/"+
+                                    record.getOrders().get(j).getMonth()+"/"+
+                                    record.getOrders().get(j).getYear()+" "+
+                                    record.getOrders().get(j).getTime()+"  "+
+                                    record.getOrders().get(j).getStatus()
+                                   );
+
+
                     }
 
                     System.out.println();
@@ -274,18 +277,19 @@ public class MainInterface {
                 default:
                     System.out.println(invalid);
                     System.out.println();
+
                 case 3:
                     i = 1;
-                    appIndex.clear();
+
                     System.out.println(orderList);
                     System.out.println(separate2);
                     for (int j = 0; j < record.getOrders().size(); j++) {
-                        //if (record.getCustomers().get(j).equals(customer) && record.getType().get(j).equals(1)) {
+
                             System.out.println(i++ + ". " + record.getOrders().get(j).getDay() + "/" +
                                     record.getOrders().get(j).getMonth() + "/" + record.getOrders().get(j).getYear() +
                                     timeString + record.getOrders().get(j).getTime()  +record.getOrders().get(j).getStatus());
-                            appIndex.add(j);
-                       // }
+
+
                     }
 
                     System.out.println();
@@ -296,15 +300,15 @@ public class MainInterface {
                         break;
                     }
                     index--;
-                    index = appIndex.get(index);
+
                     System.out.println();
-                    //System.out.println("Choose New Day:");
+
                     String newDay = record.getOrders().get(index).getDay();
-                    //System.out.println("Choose New Month:");
+
                     String newMonth = record.getOrders().get(index).getMonth();
-                    //System.out.println("Choose New Year:");
+
                     String newYear = record.getOrders().get(index).getYear();
-                   // System.out.println("Choose New Time:");
+
                     String newTime = record.getOrders().get(index).getTime();
                     System.out.println("Choose New Status:");
                     String newstatus = scan.next();
@@ -314,7 +318,7 @@ public class MainInterface {
                         System.out.println("Edit Order Successfully.\n");
                     else
                         System.out.print(error);
-*/
+
                     break;
 
             }
