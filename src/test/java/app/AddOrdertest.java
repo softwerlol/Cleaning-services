@@ -9,7 +9,7 @@ import static org.junit.Assert.assertTrue;
 public class AddOrdertest {
     String day, month, year, time;
     String status="wating";
-    String status="intreatment";
+    String status1="intreatment";
     Customer customer;
     Record record = new Record();
 

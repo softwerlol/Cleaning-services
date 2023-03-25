@@ -12,12 +12,12 @@ public class Visittest {
     int index;
 
     public Visittest() {
-        worker = new Worker("qasem", "qasem123", "Worker");
+        worker = new Worker("qasem", "qasem123","0595642328","Nubles", "Worker");
         worker.signIn("qasem", "qasem123");
-        customer = new Customer("anas", "anas123", "Customer");
-        secretary = new Secretary("sara", "sara123", "Secretary");
+        customer = new Customer("anas", "anas123","0595642329","Jenin", "Customer");
+        secretary = new Secretary("sara", "sara123","0595642325","Gaza", "Secretary");
         secretary.signIn("sara", "sara123");
-        record.addOrder(new Order("05", "01", "2023", "11"), customer);
+        record.addOrder(new Order("05", "01", "2023", "11","wating"), customer);
     }
     @Given("the secretary is logged in")
     public void the_secretary_is_logged_in() {
@@ -54,7 +54,7 @@ public class Visittest {
     @Then("an Order will be recorded")
     public void an_order_will_be_recorded() {
         if (worker.isAvailable())
-            record.addOrder(new Order("14", "05", "2023", "3"), customer);
+            record.addOrder(new Order("14", "05", "2023", "3" ,"intreatment"), customer);
     }
 
 }

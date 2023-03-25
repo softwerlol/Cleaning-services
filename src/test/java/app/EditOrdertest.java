@@ -48,7 +48,7 @@ public class EditOrdertest {
 
     @When("he\\/she  choose unavailable time")
     public void he_she_choose_unavailable_time() {
-        newdOrder = new Order("14", "05", "2023", "3","intreatment";
+        newdOrder = new Order("14", "05", "2023", "3","intreatment");
         assertFalse(record.editOrder(oldOrder, newdOrder));
     }
 

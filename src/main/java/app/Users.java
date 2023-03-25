@@ -9,7 +9,7 @@ public class Users {
     public final String role;
     protected boolean isSignedIn;
 
-    public Users(String userName, String password,String phone,String address String role) {
+    public Users(String userName, String password,String phone,String address, String role) {
         this.userName = userName;
         this.password = password;
         this.phone = phone;

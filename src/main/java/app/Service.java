@@ -11,7 +11,7 @@ public class Service {
         this.serviceName = serviceName;
         this.quantity = quantity;
         this.price = price;
-        this.dedecripation=decripation;
+        this.decripation=decripation;
         this.material=material;
     }
 
@@ -26,22 +26,13 @@ public class Service {
     public double getPrice() {
         return price;
     }
-    public double getdecripation() {
+    public String getdecripation() {
         return decripation;
     }
-    public double getmaterial() {
+    public String getmaterial() {
         return material;
     }
-public double discount(int price) {
-	if(price <= 250)
-		return price*10/100
-		else if(price >= 250 && price <=500)
-					return price*15/100
-							else if(price > 500)
-								return price*20/100
-				
-	
-}
+
 
 
 

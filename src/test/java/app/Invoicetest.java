@@ -12,11 +12,11 @@ public class Invoicetest {
     Invoice invoice;
 
     public Invoicetest() {
-        customer = new Customer("anass", "anass123", "Customer");
+        customer = new Customer("anass", "anass123","0595642329","Jenin", "Customer");
         customer.signIn("anass", "anass123");
-        secretary = new Secretary("sara", "sara123", "Secretary");
+        secretary = new Secretary("sara", "sara123","0595642325","Gaza", "Secretary");
         secretary.signIn("sami", "sami123");
-        customer.getSelectedServices().add(new Service("Cleaning carpets", 50, 250.00));
+        customer.getSelectedServices().add(new Service("Cleaning carpets", 50, 250.00,"9 m2","silk"));
     }
 
     @When("the customer finished his visit")

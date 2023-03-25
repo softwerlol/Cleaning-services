@@ -16,7 +16,7 @@ public class MainInterface {
     private static Record record = new Record();
     static ArrayList<Service> servicesList = new ArrayList<Service>();
     ArrayList<Service> selectedServices = new ArrayList<Service>();
-    ArrayList<String> email = new ArrayList<String>();
+    static ArrayList<String> email = new ArrayList<String>();
 
     static String Admin = "Admin";
     static String Worker = "Worker";
@@ -41,20 +41,20 @@ public class MainInterface {
         users.add(new Secretary("sara", "sara123","0595642325","Gaza", Secretary));
 
         Customer customer = (Customer)users.get(2);
-        record.addOrder(new Order("05", "01", "2023", "11","wating"), customer);
+        record.addOrder(new Order("05", "01", "2023", "11 ","wating"), customer);
         customer = (Customer)users.get(3);
-        record.addOrder(new Order("14", "05", "2023", "3","wating"), customer);
+        record.addOrder(new Order("14", "05", "2023", "3 ","wating"), customer);
 
-        record.addOrder(new Order("02", "05", "2023", "9","intreatment"), customer);
-        record.addOrder(new Order("25", "05", "2023", "3","Done"), customer);
+        record.addOrder(new Order("02", "05", "2023", "9 ","intreatment"), customer);
+        record.addOrder(new Order("25", "05", "2023", "3 ","Done"), customer);
 
-        record.addVisit(new Order("02", "05", "2023", "9","intreatment"));
-        record.addVisit(new Order("25", "05", "2023", "3","Done"));
+        record.addVisit(new Order("02", "05", "2023", "9 ","intreatment"));
+        record.addVisit(new Order("25", "05", "2023", "3 ","Done"));
 
-        Service service1 = new Service("Cleaning carpets", 50, 250.00,"9 m2","silk");
+        Service service1 = new Service("Cleaning carpets", 50, 250.00,"9 m2 ","silk");
         servicesList.add(service1);
-        servicesList.add(new Service("Cleaning covers", 1, 50.00 ,"3 m2","cotton"));
-        servicesList.add(new Service("Cleaning  carpets and covers", 50, 500.00,"6 m2","wool"));
+        servicesList.add(new Service("Cleaning covers", 1, 50.00 ,"3 m2 ","cotton"));
+        servicesList.add(new Service("Cleaning  carpets and covers", 50, 500.00,"6 m2 ","wool"));
 
     }
 
@@ -116,8 +116,8 @@ public class MainInterface {
             String newUserName;
             String newPassword;
             String newRole;
-            String newphone;
-            String newaddress;
+            String newPhone;
+            String newAddress;
             String emaill;
             System.out.println(Welcome + users.get(userIndex).userName);
             System.out.println(separate);
@@ -140,17 +140,17 @@ public class MainInterface {
                     System.out.println("Enter Phone:");
                     newPhone = scan.nextLine();
                     System.out.println("Enter Address:");
-                    newaddress = scan.nextLine();
+                    newAddress = scan.nextLine();
                     System.out.println("Enter Role:\n");
                     newRole = scan.nextLine();
                     if (newRole.equalsIgnoreCase(Admin))
-                        users.add(new Admin(newUserName, newPassword,newphone,newaddress, newRole));
+                        users.add(new Admin(newUserName, newPassword,newPhone,newAddress, newRole));
                     else if (newRole.equalsIgnoreCase(Worker))
-                        users.add(new Worker(newUserName, newPassword,newphone,newaddress, newRole));
+                        users.add(new Worker(newUserName, newPassword,newPhone,newAddress, newRole));
                     else if (newRole.equalsIgnoreCase(Customer))
-                        users.add(new Customer(newUserName, newPassword,newphone,newaddress, newRole));
+                        users.add(new Customer(newUserName, newPassword,newPhone,newAddress, newRole));
                     else if (newRole.equalsIgnoreCase(Secretary))
-                        users.add(new Secretary(newUserName, newPassword,newphone,newaddress, newRole));
+                        users.add(new Secretary(newUserName, newPassword,newPhone,newAddress, newRole));
                     System.out.println(Done);
                     break;
 
@@ -159,7 +159,7 @@ public class MainInterface {
                     System.out.println(separate2);
                     i = 1;
                     for (Users user : users) {
-                        System.out.println(i++ + ". " + user.userName + "\t\t" + user.password + "\t\t" + user.phone+ + "\t\t" + user.address "\t\t" + user.role);
+                        System.out.println(i++ + ". " + user.userName + "\t\t" + user.password + "\t\t" + user.phone+  "\t\t" + user.address +"\t\t" + user.role);
                     }
                     System.out.println();
                     System.out.println("\nPlease select a user:");
@@ -185,9 +185,9 @@ public class MainInterface {
                     break;
 
                 case 4:
-                	email.add(0,"");
+                    email.add(0,"");
                     System.out.println("Please write you email here :");
-                    emaill = scan.nextLine()
+                    emaill = scan.next();
                     		email.add(0,emaill);
                   
                     break;
@@ -212,8 +212,8 @@ public class MainInterface {
             System.out.println("\t\t\tWelcome W. " + users.get(userIndex).userName);
             System.out.println(separate);
             System.out.println("1. Show Customers List");
-            System.out.println("2. Show Order");
-            System.out.println("3. Change Order Status");
+            //System.out.println("2. Show Order");
+            //System.out.println("3. Change Order Status");
             System.out.println("4. Sign Out");
             System.out.println(selectOption);
             int select = scan.nextInt();
@@ -253,8 +253,8 @@ public class MainInterface {
                 case 4:
                     System.out.println(logOut);
                     scan.nextLine();
-                    return;
-                case 2:
+                    //return;
+               /* case 2:
                     i = 1;
                     appIndex.clear();
                     System.out.println(orderList);
@@ -280,12 +280,12 @@ public class MainInterface {
                     System.out.println(orderList);
                     System.out.println(separate2);
                     for (int j = 0; j < record.getOrders().size(); j++) {
-                        if (record.getCustomers().get(j) && record.getType().get(j).equals(1)) {
+                        //if (record.getCustomers().get(j).equals(customer) && record.getType().get(j).equals(1)) {
                             System.out.println(i++ + ". " + record.getOrders().get(j).getDay() + "/" +
                                     record.getOrders().get(j).getMonth() + "/" + record.getOrders().get(j).getYear() +
-                                    timeString + record.getOrders().get(j).getTime() +record.getOrders().get(j).getStatus());
+                                    timeString + record.getOrders().get(j).getTime()  +record.getOrders().get(j).getStatus());
                             appIndex.add(j);
-                        }
+                       // }
                     }
 
                     System.out.println();
@@ -308,13 +308,13 @@ public class MainInterface {
                     String newTime = record.getOrders().get(index).getTime();
                     System.out.println("Choose New Status:");
                     String newstatus = scan.next();
-                    validOrder = record.editOrder(record.getOrders().get(index), new Order(newDay, newMonth, newYear, newTime,newstatus));
+                    boolean validOrder = record.editOrder(record.getOrders().get(index), new Order(newDay, newMonth, newYear, newTime,newstatus));
 
                     if (validOrder)
                         System.out.println("Edit Order Successfully.\n");
                     else
                         System.out.print(error);
-
+*/
                     break;
 
             }
@@ -387,7 +387,7 @@ public class MainInterface {
                     String year = scan.next();
                     System.out.println("Choose Time:");
                     String time = scan.next();
-                    String Status ="wating"
+                    String status ="wating";
                     boolean validOrder = record.addOrder(new Order(day, month, year, time,status), customer);
                     if (validOrder)
                         System.out.println("Add Order Successfully.\n");
@@ -404,7 +404,7 @@ public class MainInterface {
                         if (record.getCustomers().get(j).equals(customer) && record.getType().get(j).equals(1)) {
                             System.out.println(i++ + ". " + record.getOrders().get(j).getDay() + "/" +
                                     record.getOrders().get(j).getMonth() + "/" + record.getOrders().get(j).getYear() +
-                                    timeString + record.getOrders().get(j).getTime() +record.getOrders().get(j).getStatus());
+                                    timeString + record.getOrders().get(j).getTime()+" " +record.getOrders().get(j).getStatus());
                             appIndex.add(j);
                         }
                     }
@@ -427,8 +427,8 @@ public class MainInterface {
                     String newYear = scan.next();
                     System.out.println("Choose New Time:");
                     String newTime = scan.next();
-                    String status ="wating";
-                    validOrder = record.editOrder(record.getOrders().get(index), new Order(newDay, newMonth, newYear, newTime,status));
+                    String statuss="wating";
+                    validOrder = record.editOrder(record.getOrders().get(index), new Order(newDay, newMonth, newYear, newTime,statuss));
 
                     if (validOrder)
                         System.out.println("Edit Order Successfully.\n");
@@ -491,13 +491,24 @@ public class MainInterface {
                 case 7:
                     i = 1;
                     int price=0;
+                    int price1=0;
                     for (Service service : customer.getSelectedServices()) {
-                    	price +=service.price;
+                    	price +=service.getPrice();
+                        price1 +=service.getPrice();
                         
                     }
-                    int dis =discount(price);
-                    System.out.println("Your Total Price "+price);
-                    System.out.println("Your Total Price after dicount  "+(price-dis));
+
+                    if(price <= 250)
+                        price =price - (price*10/100);
+                    else if(price >= 250 && price <=500)
+                        price= price - (price*15/100);
+                    else if(price > 500)
+                        price = price- (price*20/100);
+                    else
+
+
+                    System.out.println("Your Total Price "+price1);
+                    System.out.println("Your Total Price after dicount  "+(price));
                     //***********************************************
                     System.out.println();
                     break;
@@ -505,7 +516,7 @@ public class MainInterface {
                 	if(email.get(0)=="")
                 		System.out.println("You Dont have any email");
                 	else
-                	System.out.println("You have an email"+ email.get(0));
+                	System.out.println("You have an email \n"+ email.get(0));
                     break;
                 case 9:
                     System.out.println(logOut);
