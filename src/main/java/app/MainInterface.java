@@ -509,7 +509,7 @@ public class MainInterface {
                     else if(price > 500)
                         price = price- (price*20/100);
                     else
-
+                        price=price1;
 
                     System.out.println("Your Total Price "+price1);
                     System.out.println("Your Total Price after dicount  "+(price));
