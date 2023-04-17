@@ -10,7 +10,7 @@ Feature: Add Order to a Cleaning Order system
     And he/she choose time <Time>
     Then this Order will book for this customer
     Examples:
-      |Day|Month|Year|Time|
+      |Day|Month|Year|Time|Status|
       |"05"|"07"|"2023"|"2"|"watine"|
       |"12"|"10"|"2023"|"9"|"wating"|
 
@@ -23,7 +23,7 @@ Feature: Add Order to a Cleaning Order system
     And he/she choose time <Time>
     Then the error message "This order was reserved by another customer" will appear
     Examples:
-      |Day|Month|Year|Time|
+      |Day|Month|Year|Time|Status|
       |"05"|"01"|"2023"|"11"|"intreatment"|
       |"14"|"05"|"2023"|"3"|"intreatment"|
       

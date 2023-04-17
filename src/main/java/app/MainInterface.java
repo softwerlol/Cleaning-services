@@ -2,6 +2,7 @@ package app;
 
 
 import java.util.ArrayList;
+
 import java.util.Scanner;
 import java.util.logging.*;
 
@@ -185,11 +186,13 @@ public class MainInterface {
                     break;
 
                 case 4:
-                    email.add(0,"");
+                   email.add(0,"");
                     System.out.println("Please write you email here :");
                     emaill = scan.next();
                     		email.add(0,emaill);
-                  
+                    /*emaill e=new emaill();
+                    e.send();*/
+
                     break;
                 case 5:
                     System.out.println(logOut);
