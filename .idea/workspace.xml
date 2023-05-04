@@ -5,9 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="209daf62-714a-403c-ae7f-dee4fbe5f6c9" name="Changes" comment="test1a">
-      <change afterPath="$PROJECT_DIR$/target/classes/app/email$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/app/email.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/cucumber/wikipedia.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -350,7 +347,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683186296107</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="test1a">
+      <created>1683186812477</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1683186812477</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
