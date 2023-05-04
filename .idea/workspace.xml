@@ -5,19 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="209daf62-714a-403c-ae7f-dee4fbe5f6c9" name="Changes" comment="test1a">
-      <change afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.root/6.tree" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/app/email$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/app/email.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/cucumber/wikipedia.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.log" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.root/5.tree" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.m2e.logback/0.log" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.m2e.logback/0.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.pde.core/.cache/clean-cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.pde.core/.cache/clean-cache.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/version.ini" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/version.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/MainInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/MainInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/addOrder.feature" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/addOrder.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app/MainInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/MainInterface.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +86,7 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit3",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit3": "junit.framework.TestCase",
     "extract.method.default.visibility": "private",
-    "last_opened_file_path": "C:/Users/Legion/Desktop/crc16",
+    "last_opened_file_path": "C:/Users/Legion/Desktop/Cleaning-services-Ahmad_branch",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -110,7 +101,7 @@
   },
   "keyToStringList": {
     "ChangesTree.GroupingKeys": [
-      "module"
+      "directory"
     ],
     "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
       "PLAIN_TEXT"
@@ -352,7 +343,14 @@
       <option name="project" value="LOCAL؜" />
       <updated>1678093870542</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="test1a">
+      <created>1683186296107</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1683186296107</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
