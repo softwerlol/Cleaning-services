@@ -488,7 +488,7 @@ public class MainInterface {
                         if (record.getCustomers().get(j).equals(customer) && record.getType().get(j).equals(1)) {
                             System.out.println(i++ + ". " + record.getOrders().get(j).getDay() + "/" +
                                     record.getOrders().get(j).getMonth() + "/" + record.getOrders().get(j).getYear() +
-                                    timeString + record.getOrders().get(j).getTime() +record.getOrders().get(j).getStatus());
+                                    timeString + record.getOrders().get(j).getTime() +" "+record.getOrders().get(j).getStatus());
                             appIndex.add(j);
                         }
                     }
