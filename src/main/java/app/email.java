@@ -10,7 +10,7 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 public class email {
     public void send() {
-
+//
         // Recipient's email ID needs to be mentioned.
         String to = "mohammedadwan44@gmail.com";
 
