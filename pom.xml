@@ -13,10 +13,13 @@
         <maven.compiler.target>19</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	
-  <sonar.organization>softwersecandteam</sonar.organization>
-  <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+ 
 
     </properties>
+	<properties>
+  <sonar.organization>softwersecandteam</sonar.organization>
+  <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+</properties>
     <dependencies>
         <dependency>
             <groupId>com.sun.mail</groupId>
