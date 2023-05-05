@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="209daf62-714a-403c-ae7f-dee4fbe5f6c9" name="Changes" comment="test1a" />
+    <list default="true" id="209daf62-714a-403c-ae7f-dee4fbe5f6c9" name="Changes" comment="final-test&#10;&#10;Signed-off-by: Ahmed Hussein &lt;ahmadqasemtech11@gmail.com&gt;">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,7 +24,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Ahmad" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -275,6 +277,14 @@
       <workItem from="1679411384718" duration="813000" />
       <workItem from="1679592069973" duration="12652000" />
       <workItem from="1679660245265" duration="696000" />
+      <workItem from="1679661003383" duration="491000" />
+      <workItem from="1679680055168" duration="2000" />
+      <workItem from="1681829548760" duration="1833000" />
+      <workItem from="1682279137311" duration="214000" />
+      <workItem from="1682521240666" duration="81000" />
+      <workItem from="1682521409989" duration="25000" />
+      <workItem from="1682521446176" duration="1000" />
+      <workItem from="1683326278365" duration="371000" />
     </task>
     <task id="LOCAL؜-٠٠٠٠١" summary="test">
       <created>1677948720062</created>
@@ -339,7 +349,35 @@
       <option name="project" value="LOCAL؜" />
       <updated>1678093870542</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL؜-٠٠٠١٠" summary="test1a">
+      <created>1679661166932</created>
+      <option name="number" value="٠٠٠١٠" />
+      <option name="presentableId" value="LOCAL؜-٠٠٠١٠" />
+      <option name="project" value="LOCAL؜" />
+      <updated>1679661166932</updated>
+    </task>
+    <task id="LOCAL؜-٠٠٠١١" summary="test1a&#10;&#10;Signed-off-by: Ahmed Hussein &lt;ahmadqasemtech11@gmail.com&gt;">
+      <created>1679661262811</created>
+      <option name="number" value="٠٠٠١١" />
+      <option name="presentableId" value="LOCAL؜-٠٠٠١١" />
+      <option name="project" value="LOCAL؜" />
+      <updated>1679661262811</updated>
+    </task>
+    <task id="LOCAL؜-٠٠٠١٢" summary="test1a&#10;&#10;Signed-off-by: Ahmed Hussein &lt;ahmadqasemtech11@gmail.com&gt;">
+      <created>1679661371912</created>
+      <option name="number" value="٠٠٠١٢" />
+      <option name="presentableId" value="LOCAL؜-٠٠٠١٢" />
+      <option name="project" value="LOCAL؜" />
+      <updated>1679661371912</updated>
+    </task>
+    <task id="LOCAL؜-٠٠٠١٣" summary="final-test&#10;&#10;Signed-off-by: Ahmed Hussein &lt;ahmadqasemtech11@gmail.com&gt;">
+      <created>1679661396386</created>
+      <option name="number" value="٠٠٠١٣" />
+      <option name="presentableId" value="LOCAL؜-٠٠٠١٣" />
+      <option name="project" value="LOCAL؜" />
+      <updated>1679661396386</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -420,7 +458,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="HEAD" />
+                        <option value="origin/Mohammad_branch_final" />
                       </list>
                     </value>
                   </entry>
@@ -457,7 +495,10 @@
     <MESSAGE value="bbb" />
     <MESSAGE value="test" />
     <MESSAGE value="test1" />
-    <option name="LAST_COMMIT_MESSAGE" value="test1" />
+    <MESSAGE value="test1a" />
+    <MESSAGE value="test1a&#10;&#10;Signed-off-by: Ahmed Hussein &lt;ahmadqasemtech11@gmail.com&gt;" />
+    <MESSAGE value="final-test&#10;&#10;Signed-off-by: Ahmed Hussein &lt;ahmadqasemtech11@gmail.com&gt;" />
+    <option name="LAST_COMMIT_MESSAGE" value="final-test&#10;&#10;Signed-off-by: Ahmed Hussein &lt;ahmadqasemtech11@gmail.com&gt;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
