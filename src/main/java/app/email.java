@@ -12,7 +12,7 @@ public class email {
     public void send() {
 //
         // Recipient's email ID needs to be mentioned.
-        String to = "mohammedadwan44@gmail.com";
+        String to = "mohammedadwan44@gmaهم.com";
 
         // Sender's email ID needs to be mentioned
         String from = "adwan111@mail.ru";
