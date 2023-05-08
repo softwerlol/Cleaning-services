@@ -90,7 +90,7 @@ public class MainInterface {
             logger.log(Level.INFO,"\nEnter Password:");
             password = scan.nextLine();
 
-            System.out.println();
+
 
             userIndex = authenticateUser();
 
@@ -134,7 +134,7 @@ public class MainInterface {
             logger.log(Level.INFO,"5. Sign Out");
             logger.log(Level.INFO,selectOption+"\n");
             int select = scan.nextInt();
-            System.out.println();
+
 
             switch (select) {
                 case 1:
@@ -143,7 +143,7 @@ public class MainInterface {
                     newUserName = scan.nextLine();
                     logger.log(Level.INFO,"Enter Password:\n");
                     newPassword = scan.nextLine();
-                    System.out.println();
+
                     logger.log(Level.INFO,"Enter Phone:");
                     newPhone = scan.nextLine();
                     logger.log(Level.INFO,"Enter Address:");
@@ -170,7 +170,7 @@ public class MainInterface {
                     for (Users user : users) {
                         logger.log(Level.INFO,i++ + ". " + user.userName + "\t\t" + user.password + "\t\t" + user.phone+  "\t\t" + user.address +"\t\t" + user.role);
                     }
-                    System.out.println();
+
                     logger.log(Level.INFO,"\nPlease select a user:");
                     index = scan.nextInt();
                     if (index > i || index < 1) {
@@ -180,7 +180,7 @@ public class MainInterface {
                     }
                     index--;
                     users.remove(index);
-                    System.out.println();
+
 
                     logger.log(Level.INFO,Done);
                     break;
@@ -194,7 +194,7 @@ public class MainInterface {
                     for (Users user : users) {
                         logger.log(Level.INFO,i++ + ". " + user.userName + "\t\t" + user.password + "\t\t" + user.phone+ "\t\t" + user.address+ "\t\t" + user.role);
                     }
-                    System.out.println();
+
                     break;
 
                 case 4:
@@ -214,7 +214,7 @@ public class MainInterface {
                 default:
 
                     logger.log(Level.INFO,invalid);
-                    System.out.println();
+
 
 
                     break;
@@ -237,7 +237,7 @@ public class MainInterface {
             logger.log(Level.INFO,"4. Sign Out");
             logger.log(Level.INFO,selectOption+"\n");
             int select = scan.nextInt();
-            System.out.println();
+
 
             switch (select) {
                 case 1:
@@ -256,7 +256,7 @@ public class MainInterface {
                         logger.log(Level.INFO,"No Customers!\n");
                         break;
                     }
-                    System.out.println();
+
                     logger.log(Level.INFO,"\nPlease select a Customer:\n");
                     index = scan.nextInt();
                     if (index > i || index < 1) {
@@ -266,7 +266,7 @@ public class MainInterface {
                     }
                     index--;
                     index = appIndex.get(index);
-                    System.out.println();
+
                     logger.log(Level.INFO,"\nEnter Cleaning services Fee:\n");
                     recorded.getCustomers().get(index).setWorkerVisit(scan.nextDouble());
                     recorded.addVisit(recorded.getOrders().get(index));
@@ -299,13 +299,13 @@ public class MainInterface {
 
                     }
 
-                    System.out.println();
+
                     break;
 
                 default:
 
                     logger.log(Level.INFO,invalid+"\n");
-                    System.out.println();
+
                     break;
 
                 case 3:
@@ -322,7 +322,7 @@ public class MainInterface {
 
                     }
 
-                    System.out.println();
+
                     logger.log(Level.INFO,"\nPlease select an order:");
                     index = scan.nextInt();
                     if (index > i || index < 1) {
@@ -332,7 +332,7 @@ public class MainInterface {
                     }
                     index--;
 
-                    System.out.println();
+
 
                     String newDay = recorded.getOrders().get(index).getDay();
 
@@ -378,7 +378,7 @@ public class MainInterface {
             logger.log(Level.INFO,"9. Sign Out"+"\n");
             logger.log(Level.INFO,selectOption+"\n");
             int select = scan.nextInt();
-            System.out.println();
+
 
             switch (select) {
                 case 1:
@@ -388,7 +388,7 @@ public class MainInterface {
                     for (Service service : servicesList) {
                        logger.log(Level.INFO,i++ + ". " + service);
                     }
-                    System.out.println();
+
                     logger.log(Level.INFO,"\nPlease select a service:"+"\n");
                     index = scan.nextInt();
                     if (index > i || index < 1) {
@@ -397,7 +397,7 @@ public class MainInterface {
                         break;
                     }
                     index--;
-                    System.out.println();
+
                     if (servicesList.get(index).getQuantity() != 0) {
                         servicesList.get(index).removeQuantity();
                         customer.getSelectedServices().add(servicesList.get(index));
@@ -414,7 +414,7 @@ public class MainInterface {
                     for (Service service : customer.getSelectedServices()) {
                         logger.log(Level.INFO,i++ + ". " + service);
                     }
-                    System.out.println();
+
                     break;
 
                 case 3:
@@ -449,7 +449,7 @@ public class MainInterface {
                         }
                     }
 
-                    System.out.println();
+
                     logger.log(Level.INFO,"\nPlease select an order:"+"\n");
                     index = scan.nextInt();
                     if (index > i || index < 1) {
@@ -458,7 +458,7 @@ public class MainInterface {
                     }
                     index--;
                     index = appIndex.get(index);
-                    System.out.println();
+
                     logger.log(Level.INFO,"Choose New Day:"+"\n");
                     String newDay = scan.next();
                     logger.log(Level.INFO,"Choose New Month:"+"\n");
@@ -493,7 +493,7 @@ public class MainInterface {
                         }
                     }
 
-                    System.out.println();
+
                     logger.log(Level.INFO,"\nPlease select an order:"+"\n");
                     index = scan.nextInt();
                     if (index > i || index < 1) {
@@ -502,7 +502,7 @@ public class MainInterface {
                     }
                     index--;
                     index = appIndex.get(index);
-                    System.out.println();
+
 
                     validOrder = recorded.deleteOrder(recorded.getOrders().get(index));
 
@@ -528,7 +528,7 @@ public class MainInterface {
                         }
                     }
 
-                    System.out.println();
+
                     break;
                 case 7:
                     i = 1;
@@ -550,7 +550,7 @@ public class MainInterface {
                         price=price1;
                     logger.log(Level.INFO,"Your Total Price "+price1+"\n");
                     logger.log(Level.INFO,"Your Total Price after dicount  "+(price)+"\n");
-                    System.out.println();
+
                     break;
                 case 8:
                 	if(email.get(0).equals(""))
@@ -595,7 +595,7 @@ public class MainInterface {
                     i = 1;
                     for (int j = 0; j < recorded.getCustomers().size(); j++)
                         logger.log(Level.INFO,i++ +". " + recorded.getCustomers().get(j).userName);
-                    System.out.println();
+
                     logger.log(Level.INFO,"\nPlease select a customer:"+"\n");
                     index = scan.nextInt();
                     if (index > i || index < 1) {
@@ -604,14 +604,14 @@ public class MainInterface {
                         break;
                     }
                     index--;
-                    System.out.println();
+
 
                     Customer customer = recorded.getCustomers().get(index);
                     Invoice invoice = new Invoice(customer.getSelectedServices(), customer.getWorkerVisit());
                     invoice.printInvoice();
                     customer.getSelectedServices().clear();
                     customer.setWorkerVisit(0.00);
-                    System.out.println();
+
                     break;
 
                 case 2:
@@ -625,12 +625,12 @@ public class MainInterface {
                     }
 
                     report.numOfVisitsReport(numOfVisits, month.toString());
-                    System.out.println();
+
                     break;
 
                 case 3:
                     report.availableServicesReport(servicesList);
-                    System.out.println();
+
                     break;
 
                 case 4:
@@ -642,7 +642,7 @@ public class MainInterface {
                 default:
 
                     logger.log(Level.INFO,invalid+"\n");
-                    System.out.println();
+
                     break;
 
             }
