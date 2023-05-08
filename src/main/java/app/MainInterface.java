@@ -520,7 +520,7 @@ public class MainInterface {
                     System.out.println();
                     break;
                 case 8:
-                	if(email.get(0)=="")
+                	if(email.get(0).equals(""))
                 		System.out.println("You Dont have any email");
                 	else
                 	System.out.println("You have an email \n"+ email.get(0));
