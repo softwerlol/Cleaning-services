@@ -261,7 +261,7 @@ public class MainInterface {
                     index = scan.nextInt();
                     if (index > i || index < 1) {
 
-                        logger.log(Level.INFO,"invalid"+"\n");
+                        logger.log(Level.INFO,"invalid\n");
                         break;
                     }
                     index--;
@@ -289,7 +289,7 @@ public class MainInterface {
                     logger.log(Level.INFO,separate2+"\n");
                     for (int j = 0; j < recorded.getOrders().size(); j++) {
 
-                        logger.log(Level.INFO,i++ + ". " + recorded.getOrders().get(j).getDay()+"/"+
+                        System.out.println(i++ + ". " + recorded.getOrders().get(j).getDay()+"/"+
                                     recorded.getOrders().get(j).getMonth()+"/"+
                                     recorded.getOrders().get(j).getYear()+" "+
                                     recorded.getOrders().get(j).getTime()+"  "+
@@ -578,29 +578,32 @@ public class MainInterface {
             int numOfVisits = 0;
             Report report = new Report();
 
-            logger.log(Level.INFO,Welcome + users.get(userIndex).userName+"\n");
-            logger.log(Level.INFO,separate+"\n");
-            logger.log(Level.INFO,"1. Print Invoice"+"\n");
-            logger.log(Level.INFO,"2. Print a report of visitors in a certain month"+"\n");
-            logger.log(Level.INFO,"3. Print a report of available services"+"\n");
-            logger.log(Level.INFO,"4. Sign Out"+"\n");
-            logger.log(Level.INFO,selectOption+"\n");
+            logger.log(Level.INFO,Welcome + users.get(userIndex).userName);
+            scan.nextLine();
+            logger.log(Level.INFO,separate);
+            scan.nextLine();
+            logger.log(Level.INFO,"1. Print Invoice\n");
+            logger.log(Level.INFO,"2. Print a report of visitors in a certain month\n");
+            logger.log(Level.INFO,"3. Print a report of available services\n");
+            logger.log(Level.INFO,"4. Sign Out\n");
+            logger.log(Level.INFO,selectOption);
+            scan.nextLine();
             int select = scan.nextInt();
 
 
             switch (select) {
                 case 1:
-                    logger.log(Level.INFO,"Customers List:"+"\n");
+                    logger.log(Level.INFO,"Customers List:\n");
                     logger.log(Level.INFO,separate2+"\n");
                     i = 1;
                     for (int j = 0; j < recorded.getCustomers().size(); j++)
                         logger.log(Level.INFO,i++ +". " + recorded.getCustomers().get(j).userName);
 
-                    logger.log(Level.INFO,"\nPlease select a customer:"+"\n");
+                    logger.log(Level.INFO,"\nPlease select a customer:");
                     index = scan.nextInt();
                     if (index > i || index < 1) {
-                        System.out.println(invalid);
-                        logger.log(Level.INFO,invalid+"\n");
+
+                        logger.log(Level.INFO,invalid);
                         break;
                     }
                     index--;
@@ -616,7 +619,7 @@ public class MainInterface {
 
                 case 2:
 
-                    logger.log(Level.INFO,"Choose Month:"+"\n");
+                    logger.log(Level.INFO,"Choose Month:\n");
 
                     Integer month = scan.nextInt();
                     for (int j = 0; j < recorded.getOrders().size(); j++) {
@@ -630,18 +633,20 @@ public class MainInterface {
 
                 case 3:
                     report.availableServicesReport(servicesList);
+                    scan.nextLine();
 
                     break;
 
                 case 4:
 
-                    logger.log(Level.INFO,logOut+"\n");
+                    logger.log(Level.INFO,logOut);
                     scan.nextLine();
                     return;
 
                 default:
 
-                    logger.log(Level.INFO,invalid+"\n");
+                    logger.log(Level.INFO,invalid);
+
 
                     break;
 
