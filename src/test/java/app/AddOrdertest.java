@@ -8,14 +8,16 @@ import static org.junit.Assert.assertTrue;
 
 public class AddOrdertest {
     String day, month, year, time;
+    String status="wating";
+    String status1="intreatment";
     Customer customer;
     Record record = new Record();
 
     public AddOrdertest() {
-        customer = new Customer("anass", "anass123", "Customer");
+        customer = new Customer("anass", "anass123","0595642329","Jenin", "Customer");
         customer.signIn("anass", "anass123");
-        record.addOrder(new Order("05", "01", "2022", "11"), customer);
-        record.addOrder(new Order("14", "05", "2022", "3"), customer);
+        record.addOrder(new Order("05", "01", "2022", "11","watimg"), customer);
+        record.addOrder(new Order("14", "05", "2022", "3","intreatment"), customer);
     }
 
     @Given("the customer is logged in")
@@ -45,12 +47,12 @@ public class AddOrdertest {
 
     @Then("this order will book for this customer")
     public void this_order_will_book_for_this_customer() {
-        assertTrue(record.addOrder(new Order(day, month, year, time), customer));
+        assertTrue(record.addOrder(new Order(day, month, year, time,status), customer));
     }
 
     @Then("the error message {string} will appear")
     public void the_error_message_will_appear(String string) {
-        assertFalse(record.addOrder(new Order(day, month, year, time), customer));
+        assertFalse(record.addOrder(new Order(day, month, year, time,status1), customer));
 
     }
 }

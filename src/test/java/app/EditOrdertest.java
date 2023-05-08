@@ -14,15 +14,15 @@ public class EditOrdertest {
 
     String day, month, year, time;
     Customer customer;
-    Order oldOrder = new Order("05", "01", "2023", "11");
+    Order oldOrder = new Order("05", "01", "2023", "11","wating");
     Order newdOrder;
     Record record = new Record();
 
     public EditOrdertest() {
-        customer = new Customer("anas", "anas123", "Customer");
+        customer = new Customer("anas", "anas123","0595642329","Jenin", "Customer");
         customer.signIn("anas", "anas123");
         record.addOrder(oldOrder, customer);
-        record.addOrder(new Order("14", "05", "2022", "3"), customer);
+        record.addOrder(new Order("14", "05", "2022", "3","intreatment"), customer);
     }
 
     @Given("he\\/she want to edit this order to another time")
@@ -35,7 +35,7 @@ public class EditOrdertest {
 
     @When("he\\/she should  choose another avaliable order to book")
     public void he_she_should_choose_another_avaliable_order_to_book() {
-        newdOrder = new Order("20", "03", "2023", "1");
+        newdOrder = new Order("20", "03", "2023", "1","wating");
 
     }
 
@@ -48,7 +48,7 @@ public class EditOrdertest {
 
     @When("he\\/she  choose unavailable time")
     public void he_she_choose_unavailable_time() {
-        newdOrder = new Order("14", "05", "2023", "3");
+        newdOrder = new Order("14", "05", "2023", "3","intreatment");
         assertFalse(record.editOrder(oldOrder, newdOrder));
     }
 
@@ -61,7 +61,6 @@ public class EditOrdertest {
         logger.log(Level.INFO,string);
     }
 
-    }
-
+}
 
 

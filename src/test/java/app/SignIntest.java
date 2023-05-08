@@ -30,13 +30,13 @@ public class SignIntest {
         for (int i = 0; i < rows.size(); i++) {
             Users addUser;
             if (rows.get(i).get(2).equals("Admin"))
-                addUser = new Admin(rows.get(i).get(0), rows.get(i).get(1), rows.get(i).get(2));
+                addUser = new Admin(rows.get(i).get(0), rows.get(i).get(1),rows.get(i).get(2),rows.get(i).get(3), rows.get(i).get(4));
             else if (rows.get(i).get(2).equals("Worker"))
-                addUser = new Worker(rows.get(i).get(0), rows.get(i).get(1), rows.get(i).get(2));
+                addUser = new Worker(rows.get(i).get(0), rows.get(i).get(1), rows.get(i).get(2),rows.get(i).get(3),rows.get(i).get(4));
             else if (rows.get(i).get(2).equals("Customer"))
-                addUser = new Customer(rows.get(i).get(0), rows.get(i).get(1), rows.get(i).get(2));
+                addUser = new Customer(rows.get(i).get(0), rows.get(i).get(1), rows.get(i).get(2),rows.get(i).get(3),rows.get(i).get(4));
             else
-                addUser = new Secretary(rows.get(i).get(0), rows.get(i).get(1), rows.get(i).get(2));
+                addUser = new Secretary(rows.get(i).get(0), rows.get(i).get(1), rows.get(i).get(2),rows.get(i).get(3),rows.get(i).get(4));
             usersList.add(addUser);
         }
     }
@@ -72,15 +72,15 @@ public class SignIntest {
             if (usersList.get(i).checkRole(role)) {
                 assertTrue(usersList.get(i).isSignedIn());
                 if (role.equals("Admin")) {
-                    user = new Admin(userName, password, role);
+                    user = new Admin(userName, password,"0595642327", "Tulkrem",role);
                     assertEquals(true, usersList.get(i).equals(user));
                 }
                 else if (role.equals("Worker")) {
-                    user = new Worker(userName, password, role);
+                    user = new Worker(userName, password,"0595642328","Nubles", role);
                     assertEquals(true, usersList.get(i).equals(user));
                 }
                 else if (role.equals("Secretary")) {
-                    user = new Secretary(userName, password, role);
+                    user = new Secretary(userName, password,"0595642324","Ramallah", role);
                     assertEquals(true, usersList.get(i).equals(user));
                 }
             }
@@ -103,15 +103,15 @@ public class SignIntest {
             if (usersList.get(i).checkRole(role)) {
                 assertFalse(usersList.get(i).isSignedIn());
                 if (role.equals("Admin")) {
-                    user = new Admin(userName, password, role);
+                    user = new Admin(userName, password,"0595642327", "Tulkrem", role);
                     assertEquals(false, usersList.get(i).equals(user));
                 }
                 else if (role.equals("Worker")) {
-                    user = new Worker(userName, password, role);
+                    user = new Worker(userName, password,"0595642328","Nubles", role);
                     assertEquals(false, usersList.get(i).equals(user));
                 }
                 else if (role.equals("Secretary")) {
-                    user = new Secretary(userName, password, role);
+                    user = new Secretary(userName, password,"0595642324","Ramallah", role);
                     assertEquals(false, usersList.get(i).equals(user));
                 }
             }

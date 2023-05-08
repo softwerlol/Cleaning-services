@@ -19,21 +19,21 @@ public class Reporttest {
     ArrayList<Service> servicesList = new ArrayList<Service>();
 
     public Reporttest() {
-        customer = new Customer("anas", "anas123", "Customer");
+        customer = new Customer("anas", "anas123","0595642329","Jenin", "Customer");
         customer.signIn("anas", "anas123");
-        secretary = new Secretary("sami", "sami123", "Secretary");
-        secretary.signIn("sami", "sami123");
-        record.addOrder(new Order("05", "01", "2023", "11"), customer);
-        record.addOrder(new Order("02", "05", "2023", "9"), customer);
-        record.addOrder(new Order("14", "05", "2023", "3"), customer);
+        secretary = new Secretary("sara", "sara123","0595642325","Gaza","Secretary");
+        secretary.signIn("sara", "sara123");
+        record.addOrder(new Order("05", "01", "2023", "11","wating"), customer);
+        record.addOrder(new Order("02", "05", "2023", "9","intreatment"), customer);
+        record.addOrder(new Order("14", "05", "2023", "3","intreatment"), customer);
 
-        record.addVisit(new Order("05", "01", "2023", "11"));
-        record.addVisit(new Order("02", "05", "2023", "9"));
-        record.addVisit(new Order("14", "05", "2023", "3"));
+        record.addVisit(new Order("05", "01", "2023", "11","wating"));
+        record.addVisit(new Order("02", "05", "2023", "9","wating"));
+        record.addVisit(new Order("14", "05", "2023", "3","wating"));
 
-        servicesList.add(new Service("Cleaning carpets", 50, 250.00));
-        servicesList.add(new Service("Cleaning covers", 0, 50.00));
-        servicesList.add(new Service("Cleaning  carpets and covers", 50, 500.00));
+        servicesList.add(new Service("Cleaning carpets", 50, 250.00,"9 m2 ","silk"));
+        servicesList.add(new Service("Cleaning covers", 0, 50.00,"3 m2 ","cotton"));
+        servicesList.add(new Service("Cleaning  carpets and covers", 50, 500.00,"6 m2 ","wool"));
     }
 
 

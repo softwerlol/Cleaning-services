@@ -14,10 +14,10 @@ public class deleteOrdertest {
     Record record = new Record();
 
     public deleteOrdertest() {
-        customer= new Customer("anas", "anas123", "Customer");
+        customer= new Customer("anas", "anas123","0595642329","Jenin", "Customer");
         customer.signIn("anas", "anas123");
-        record.addOrder(new Order("05", "01", "2023", "11"), customer);
-        record.addOrder(new Order("14", "05", "2023", "3"), customer);
+        record.addOrder(new Order("05", "01", "2023", "11","wating"), customer);
+        record.addOrder(new Order("14", "05", "2023", "3","intreatment"), customer);
     }
 
     @Given("the customer is logged in")
@@ -47,7 +47,7 @@ public class deleteOrdertest {
 
     @Then("this order will be deleted")
     public void this_order_will_be_deleted() {
-        assertTrue(record.deleteOrder(new Order("05", "01", "2023", "11")));
+        assertTrue(record.deleteOrder(new Order("05", "01", "2023", "11","wating")));
     }
 
     @Then("success message appear {string}")
@@ -60,7 +60,7 @@ public class deleteOrdertest {
 
     @Then("this order will not be deleted")
     public void this_order_will_not_be_deleted() {
-        assertTrue(record.getOrders().contains(new Order("05", "01", "2023", "11")));
+        assertTrue(record.getOrders().contains(new Order("05", "01", "2023", "11","wating")));
     }
 
 }

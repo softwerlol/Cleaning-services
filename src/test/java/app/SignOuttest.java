@@ -16,7 +16,7 @@ public class SignOuttest {
         List<List<String>> rows = dataTable.asLists(String.class);
 
         for (int i = 0; i < rows.size(); i++) {
-            Users addUser = new Users(rows.get(i).get(0), rows.get(i).get(1), rows.get(i).get(2));
+            Users addUser = new Users(rows.get(i).get(0), rows.get(i).get(1),rows.get(i).get(2),rows.get(i).get(3), rows.get(i).get(4));
             usersList.add(addUser);
         }
     }

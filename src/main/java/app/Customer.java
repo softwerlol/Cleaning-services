@@ -8,8 +8,8 @@ public class Customer extends Users {
     private List<Service> selectedServices = new ArrayList<>();
     private double workerVisit;
 
-    public Customer(String userName, String password, String role) {
-        super(userName, password, role);
+    public Customer(String userName, String password,String phone,String address, String role) {
+        super(userName, password,phone,address ,role);
     }
 
     public List<Service> getSelectedServices() {
@@ -49,4 +49,3 @@ public class Customer extends Users {
     }
 
 }
-

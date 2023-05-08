@@ -17,11 +17,11 @@ public class Servicestest {
     ArrayList<Service> selectedServices = new ArrayList<Service>();
 
     public Servicestest() {
-        Service service1 = new Service("Cleaning carpets", 50, 250.00);
+        Service service1 = new Service("Cleaning carpets", 50, 250.00,"9 m2","silk");
         servicesList.add(service1);
-        servicesList.add(new Service("Cleaning covers", 1, 50.00));
-        servicesList.add(new Service("Cleaning  carpets and covers", 50, 500.00));
-        customer = new Customer("anas", "anas123", "Customer");
+        servicesList.add(new Service("Cleaning covers", 1, 50.00,"3 m2","cotton"));
+        servicesList.add(new Service("Cleaning  carpets and covers", 50, 500.00,"6 m2","wool"));
+        customer = new Customer("anas", "anas123","0595642329","Jenin", "Customer");
         customer.signIn("anas", "anas123");
     }
 
