@@ -8,6 +8,7 @@ import java.util.logging.*;
 
 public class MainInterface {
     static Logger logger = Logger.getLogger(MainInterface.class.getName());
+    static Logger logg;
     static int userIndex;
     private static Scanner scan = new Scanner(System.in);
 
@@ -78,13 +79,15 @@ public class MainInterface {
         init();
 
         while (true) {
-            System.out.println("Enter Username:");
+
+            logger.log(Level.INFO,"Enter Username:");
             userName = scan.nextLine();
 
             if (userName.equalsIgnoreCase("exit"))
                 System.exit(0);
 
-            System.out.println("\nEnter Password:");
+
+            logger.log(Level.INFO,"\nEnter Password:");
             password = scan.nextLine();
 
             System.out.println();
@@ -106,7 +109,8 @@ public class MainInterface {
                 break;
 
             else
-                System.out.println("The username or password is incorrect. Please try again...\n");
+
+            logger.log(Level.INFO,"The username or password is incorrect. Please try again...\n");
         }
 
     }
@@ -123,11 +127,12 @@ public class MainInterface {
             String emaill;
             System.out.println(Welcome + users.get(userIndex).userName);
             System.out.println(separate);
-            System.out.println("1. Add User");
-            System.out.println("2. Remove User");
-            System.out.println("3. Show Users");
-            System.out.println("4. Send email");
-            System.out.println("5. Sign Out");
+            logger.log(Level.INFO,"1. Add User");
+            logger.log(Level.INFO,"2. Remove User");
+            logger.log(Level.INFO,"3. Show Users");
+            logger.log(Level.INFO,"4. Send email");
+            logger.log(Level.INFO,"5. Sign Out");
+
             System.out.println(selectOption);
             int select = scan.nextInt();
             System.out.println();
@@ -135,15 +140,17 @@ public class MainInterface {
             switch (select) {
                 case 1:
                     scan.nextLine();
-                    System.out.println("Enter Username:");
+                    logger.log(Level.INFO,"Enter Username:");
                     newUserName = scan.nextLine();
-                    System.out.println("Enter Password:\n");
+                    logger.log(Level.INFO,"Enter Password:\n");
                     newPassword = scan.nextLine();
-                    System.out.println("Enter Phone:");
+                    System.out.println();
+                    logger.log(Level.INFO,"Enter Phone:");
                     newPhone = scan.nextLine();
-                    System.out.println("Enter Address:");
+                    logger.log(Level.INFO,"Enter Address:");
                     newAddress = scan.nextLine();
-                    System.out.println("Enter Role:\n");
+
+                    logger.log(Level.INFO,"Enter Role:\n");
                     newRole = scan.nextLine();
                     if (newRole.equalsIgnoreCase(Admin))
                         users.add(new Admin(newUserName, newPassword,newPhone,newAddress, newRole));
@@ -153,50 +160,55 @@ public class MainInterface {
                         users.add(new Customer(newUserName, newPassword,newPhone,newAddress, newRole));
                     else if (newRole.equalsIgnoreCase(Secretary))
                         users.add(new Secretary(newUserName, newPassword,newPhone,newAddress, newRole));
-                    System.out.println(Done);
+                    logger.log(Level.INFO,Done);
                     break;
 
                 case 2:
-                    System.out.println("Users List:");
-                    System.out.println(separate2);
+                    logger.log(Level.INFO,"Users List:\n");
+
+                    logger.log(Level.INFO,separate2);
                     i = 1;
                     for (Users user : users) {
-                        System.out.println(i++ + ". " + user.userName + "\t\t" + user.password + "\t\t" + user.phone+  "\t\t" + user.address +"\t\t" + user.role);
+                        logger.log(Level.INFO,i++ + ". " + user.userName + "\t\t" + user.password + "\t\t" + user.phone+  "\t\t" + user.address +"\t\t" + user.role);
                     }
                     System.out.println();
-                    System.out.println("\nPlease select a user:");
+                    logger.log(Level.INFO,"\nPlease select a user:");
                     index = scan.nextInt();
                     if (index > i || index < 1) {
-                        System.out.println(invalid);
+
+                        logger.log(Level.INFO,invalid);
                         break;
                     }
                     index--;
                     users.remove(index);
                     System.out.println();
-                    System.out.println(Done);
+
+                    logger.log(Level.INFO,Done);
                     break;
 
                 case 3:
-                    System.out.println("Users List:");
-                    System.out.println(separate2);
+
+                    logger.log(Level.INFO,"Users List:\n");
+                    logger.log(Level.INFO,separate2);
+
                     i = 1;
                     for (Users user : users) {
-                        System.out.println(i++ + ". " + user.userName + "\t\t" + user.password + "\t\t" + user.phone+ "\t\t" + user.address+ "\t\t" + user.role);
+                        logger.log(Level.INFO,i++ + ". " + user.userName + "\t\t" + user.password + "\t\t" + user.phone+ "\t\t" + user.address+ "\t\t" + user.role);
                     }
                     System.out.println();
                     break;
 
                 case 4:
                    email.add(0,"");
-                    System.out.println("Please write you email here :");
+
+                    logger.log(Level.INFO,"Please write you email here :");
                     emaill = scan.next();
                     		email.add(0,emaill);
-                    /*emaill e=new emaill();
-                    e.send();*/
 
                     break;
                 case 5:
-                    System.out.println(logOut);
+
+                    logger.log(Level.INFO,logOut);
                     scan.nextLine();
                     return;
 
