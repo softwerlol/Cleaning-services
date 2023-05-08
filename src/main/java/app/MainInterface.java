@@ -203,6 +203,7 @@ public class MainInterface {
                 default:
                     System.out.println(invalid);
                     System.out.println();
+                    break;
             }
         }
     }
