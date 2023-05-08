@@ -21,7 +21,7 @@ public class MainInterface {
     ArrayList<Service> selectedServices = new ArrayList<Service>();
     static ArrayList<String> email = new ArrayList<String>();
 
-    static String Adm_in = "Admin";
+    static String Admin = "Admin";
     static String Worker = "Worker";
     static String Customer = "Customer";
     static String Secretary = "Secretary";
@@ -37,7 +37,7 @@ public class MainInterface {
     static String timeString = "   Time: ";
 
     public static void init() {
-        users.add(new Admin("Ahmad", "ahmad123","0595642327","Tulkrem", Adm_in));
+        users.add(new Admin("Ahmad", "ahmad123","0595642327","Tulkrem", Admin));
         users.add(new Worker("qasem", "qasem123","0595642328","Nubles", Worker));
         users.add(new Customer("anas", "anas123","0595642329","Jenin", Customer));
         users.add(new Customer("sami", "sami123","0595642324","Ramallah", Customer));
@@ -95,7 +95,7 @@ public class MainInterface {
             userIndex = authenticateUser();
 
             if (userIndex != -1) {
-                if (users.get(userIndex).checkRole(Adm_in))
+                if (users.get(userIndex).checkRole(Admin))
                     adminActivities();
                 else if (users.get(userIndex).checkRole(Worker))
                     workerActivities();
@@ -151,7 +151,7 @@ public class MainInterface {
 
                     logger.log(Level.INFO,"Enter Role:\n");
                     newRole = scan.nextLine();
-                    if (newRole.equalsIgnoreCase(Adm_in))
+                    if (newRole.equalsIgnoreCase(Admin))
                         users.add(new Admin(newUserName, newPassword,newPhone,newAddress, newRole));
                     else if (newRole.equalsIgnoreCase(Worker))
                         users.add(new Worker(newUserName, newPassword,newPhone,newAddress, newRole));
