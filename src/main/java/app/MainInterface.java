@@ -125,15 +125,14 @@ public class MainInterface {
             String newPhone;
             String newAddress;
             String emaill;
-            System.out.println(Welcome + users.get(userIndex).userName);
-            System.out.println(separate);
+            logger.log(Level.INFO,Welcome + users.get(userIndex).userName+"\n");
+            logger.log(Level.INFO,separate2+"\n");
             logger.log(Level.INFO,"1. Add User");
             logger.log(Level.INFO,"2. Remove User");
             logger.log(Level.INFO,"3. Show Users");
             logger.log(Level.INFO,"4. Send email");
             logger.log(Level.INFO,"5. Sign Out");
-
-            System.out.println(selectOption);
+            logger.log(Level.INFO,selectOption+"\n");
             int select = scan.nextInt();
             System.out.println();
 
@@ -566,7 +565,7 @@ public class MainInterface {
 
                 default:
                     logger.log(Level.INFO,invalid+"\n");
-                    System.out.println();
+
                     break;
             }
         }
@@ -579,32 +578,34 @@ public class MainInterface {
             int numOfVisits = 0;
             Report report = new Report();
 
-            System.out.println(Welcome + users.get(userIndex).userName);
-            System.out.println(separate);
-            System.out.println("1. Print Invoice");
-            System.out.println("2. Print a report of visitors in a certain month");
-            System.out.println("3. Print a report of available services");
-            System.out.println("4. Sign Out");
-            System.out.println(selectOption);
+            logger.log(Level.INFO,Welcome + users.get(userIndex).userName+"\n");
+            logger.log(Level.INFO,separate+"\n");
+            logger.log(Level.INFO,"1. Print Invoice"+"\n");
+            logger.log(Level.INFO,"2. Print a report of visitors in a certain month"+"\n");
+            logger.log(Level.INFO,"3. Print a report of available services"+"\n");
+            logger.log(Level.INFO,"4. Sign Out"+"\n");
+            logger.log(Level.INFO,selectOption+"\n");
             int select = scan.nextInt();
-            System.out.println();
+
 
             switch (select) {
                 case 1:
-                    System.out.println("Customers List:");
-                    System.out.println(separate2);
+                    logger.log(Level.INFO,"Customers List:"+"\n");
+                    logger.log(Level.INFO,separate2+"\n");
                     i = 1;
                     for (int j = 0; j < recorded.getCustomers().size(); j++)
-                        System.out.println(i++ +". " + recorded.getCustomers().get(j).userName);
+                        logger.log(Level.INFO,i++ +". " + recorded.getCustomers().get(j).userName);
                     System.out.println();
-                    System.out.println("\nPlease select a customer:");
+                    logger.log(Level.INFO,"\nPlease select a customer:"+"\n");
                     index = scan.nextInt();
                     if (index > i || index < 1) {
                         System.out.println(invalid);
+                        logger.log(Level.INFO,invalid+"\n");
                         break;
                     }
                     index--;
                     System.out.println();
+
                     Customer customer = recorded.getCustomers().get(index);
                     Invoice invoice = new Invoice(customer.getSelectedServices(), customer.getWorkerVisit());
                     invoice.printInvoice();
@@ -614,7 +615,9 @@ public class MainInterface {
                     break;
 
                 case 2:
-                    System.out.println("Choose Month:");
+
+                    logger.log(Level.INFO,"Choose Month:"+"\n");
+
                     Integer month = scan.nextInt();
                     for (int j = 0; j < recorded.getOrders().size(); j++) {
                         if (recorded.getType().get(j) == 2 && (Integer.parseInt(recorded.getOrders().get(j).getMonth()) == month))
@@ -631,13 +634,16 @@ public class MainInterface {
                     break;
 
                 case 4:
-                    System.out.println(logOut);
+
+                    logger.log(Level.INFO,logOut+"\n");
                     scan.nextLine();
                     return;
 
                 default:
-                    System.out.println(invalid);
+
+                    logger.log(Level.INFO,invalid+"\n");
                     System.out.println();
+                    break;
 
             }
         }
