@@ -1,5 +1,7 @@
 package app;
 import java.util.Properties;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import javax.mail.Message;
 import javax.mail.MessagingException;
@@ -9,8 +11,8 @@ import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 public class email {
+    static Logger logger = Logger.getLogger(email.class.getName());
     public void send() {
-//
         // Recipient's email ID needs to be mentioned.
         String to = "mohammedadwan44@gmail.com";
 
@@ -59,12 +61,14 @@ public class email {
             // Now set the actual message
             message.setText("Your order Done you can take it thank you for using our service");
 
-            System.out.println("sending...");
+
+            logger.log(Level.INFO,"sending...");
             // Send message
             Transport.send(message);
-            System.out.println("Sent message successfully....");
+
+            logger.log(Level.INFO,"Sent message successfully....");
         } catch (MessagingException mex) {
-           // mex.printStackTrace();
+
         }
 
     }
