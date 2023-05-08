@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="209daf62-714a-403c-ae7f-dee4fbe5f6c9" name="Changes" comment="test1">
+    <list default="true" id="209daf62-714a-403c-ae7f-dee4fbe5f6c9" name="Changes" comment="sonar">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/MainInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/MainInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app/MainInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/MainInterface.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -457,7 +456,21 @@
       <option name="project" value="LOCAL" />
       <updated>1683552334869</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="sonar">
+      <created>1683554458823</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1683554458823</updated>
+    </task>
+    <task id="LOCAL-00027" summary="sonar">
+      <created>1683555529593</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1683555529593</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -576,7 +589,8 @@
     <MESSAGE value="test" />
     <MESSAGE value="test1a" />
     <MESSAGE value="test1" />
-    <option name="LAST_COMMIT_MESSAGE" value="test1" />
+    <MESSAGE value="sonar" />
+    <option name="LAST_COMMIT_MESSAGE" value="sonar" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
