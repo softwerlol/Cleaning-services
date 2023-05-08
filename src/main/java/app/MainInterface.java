@@ -15,7 +15,7 @@ public class MainInterface {
     private static String userName;
     private static String password;
 
-    private static Record record = new Record();
+    private static Record recorded = new Record();
     static ArrayList<Service> servicesList = new ArrayList<Service>();
     ArrayList<Service> selectedServices = new ArrayList<Service>();
     static ArrayList<String> email = new ArrayList<String>();
@@ -43,15 +43,15 @@ public class MainInterface {
         users.add(new Secretary("sara", "sara123","0595642325","Gaza", Secretary));
 
         Customer customer = (Customer)users.get(2);
-        record.addOrder(new Order("05", "01", "2023", "11 ","wating"), customer);
+        recorded.addOrder(new Order("05", "01", "2023", "11 ","wating"), customer);
         customer = (Customer)users.get(3);
-        record.addOrder(new Order("14", "05", "2023", "3 ","wating"), customer);
+        recorded.addOrder(new Order("14", "05", "2023", "3 ","wating"), customer);
 
-        record.addOrder(new Order("02", "05", "2023", "9 ","intreatment"), customer);
-        record.addOrder(new Order("25", "05", "2023", "3 ","Done"), customer);
+        recorded.addOrder(new Order("02", "05", "2023", "9 ","intreatment"), customer);
+        recorded.addOrder(new Order("25", "05", "2023", "3 ","Done"), customer);
 
-        record.addVisit(new Order("02", "05", "2023", "9 ","intreatment"));
-        record.addVisit(new Order("25", "05", "2023", "3 ","Done"));
+        recorded.addVisit(new Order("02", "05", "2023", "9 ","intreatment"));
+        recorded.addVisit(new Order("25", "05", "2023", "3 ","Done"));
 
         Service service1 = new Service("Cleaning carpets", 50, 250.00,"9 m2 ","silk");
         servicesList.add(service1);
@@ -230,9 +230,9 @@ public class MainInterface {
                     System.out.println(separate2);
                     i = 1;
                     appIndex.clear();
-                    for (int j = 0; j < record.getCustomers().size(); j++)
-                        if (record.getType().get(j) == 1) {
-                            System.out.println(i++ + ". " + record.getCustomers().get(j).userName);
+                    for (int j = 0; j < recorded.getCustomers().size(); j++)
+                        if (recorded.getType().get(j) == 1) {
+                            System.out.println(i++ + ". " + recorded.getCustomers().get(j).userName);
                             appIndex.add(j);
                         }
                     if (appIndex.isEmpty()) {
@@ -250,8 +250,8 @@ public class MainInterface {
                     index = appIndex.get(index);
                     System.out.println();
                     System.out.println("\nEnter Cleaning services Fee:");
-                    record.getCustomers().get(index).setWorkerVisit(scan.nextDouble());
-                    record.addVisit(record.getOrders().get(index));
+                    recorded.getCustomers().get(index).setWorkerVisit(scan.nextDouble());
+                    recorded.addVisit(recorded.getOrders().get(index));
                     System.out.println("\nDone!\n");
                     break;
 
@@ -264,13 +264,13 @@ public class MainInterface {
 
                     System.out.println(orderList);
                     System.out.println(separate2);
-                    for (int j = 0; j < record.getOrders().size(); j++) {
+                    for (int j = 0; j < recorded.getOrders().size(); j++) {
 
-                            System.out.println(i++ + ". " + record.getOrders().get(j).getDay()+"/"+
-                                    record.getOrders().get(j).getMonth()+"/"+
-                                    record.getOrders().get(j).getYear()+" "+
-                                    record.getOrders().get(j).getTime()+"  "+
-                                    record.getOrders().get(j).getStatus()
+                            System.out.println(i++ + ". " + recorded.getOrders().get(j).getDay()+"/"+
+                                    recorded.getOrders().get(j).getMonth()+"/"+
+                                    recorded.getOrders().get(j).getYear()+" "+
+                                    recorded.getOrders().get(j).getTime()+"  "+
+                                    recorded.getOrders().get(j).getStatus()
                                    );
 
 
@@ -288,11 +288,11 @@ public class MainInterface {
 
                     System.out.println(orderList);
                     System.out.println(separate2);
-                    for (int j = 0; j < record.getOrders().size(); j++) {
+                    for (int j = 0; j < recorded.getOrders().size(); j++) {
 
-                            System.out.println(i++ + ". " + record.getOrders().get(j).getDay() + "/" +
-                                    record.getOrders().get(j).getMonth() + "/" + record.getOrders().get(j).getYear() +
-                                    timeString + record.getOrders().get(j).getTime()  +record.getOrders().get(j).getStatus());
+                            System.out.println(i++ + ". " + recorded.getOrders().get(j).getDay() + "/" +
+                                    recorded.getOrders().get(j).getMonth() + "/" + recorded.getOrders().get(j).getYear() +
+                                    timeString + recorded.getOrders().get(j).getTime()  +recorded.getOrders().get(j).getStatus());
 
 
                     }
@@ -308,16 +308,16 @@ public class MainInterface {
 
                     System.out.println();
 
-                    String newDay = record.getOrders().get(index).getDay();
+                    String newDay = recorded.getOrders().get(index).getDay();
 
-                    String newMonth = record.getOrders().get(index).getMonth();
+                    String newMonth = recorded.getOrders().get(index).getMonth();
 
-                    String newYear = record.getOrders().get(index).getYear();
+                    String newYear = recorded.getOrders().get(index).getYear();
 
-                    String newTime = record.getOrders().get(index).getTime();
+                    String newTime = recorded.getOrders().get(index).getTime();
                     System.out.println("Choose New Status:");
                     String newstatus = scan.next();
-                    boolean validOrder = record.editOrder(record.getOrders().get(index), new Order(newDay, newMonth, newYear, newTime,newstatus));
+                    boolean validOrder = recorded.editOrder(recorded.getOrders().get(index), new Order(newDay, newMonth, newYear, newTime,newstatus));
 
                     if (validOrder)
                         System.out.println("Edit Order Successfully.\n");
@@ -397,7 +397,7 @@ public class MainInterface {
                     System.out.println("Choose Time:");
                     String time = scan.next();
                     String status ="wating";
-                    boolean validOrder = record.addOrder(new Order(day, month, year, time,status), customer);
+                    boolean validOrder = recorded.addOrder(new Order(day, month, year, time,status), customer);
                     if (validOrder)
                         System.out.println("Add Order Successfully.\n");
                     else
@@ -409,11 +409,11 @@ public class MainInterface {
                     appIndex.clear();
                     System.out.println(orderList);
                     System.out.println(separate2);
-                    for (int j = 0; j < record.getOrders().size(); j++) {
-                        if (record.getCustomers().get(j).equals(customer) && record.getType().get(j).equals(1)) {
-                            System.out.println(i++ + ". " + record.getOrders().get(j).getDay() + "/" +
-                                    record.getOrders().get(j).getMonth() + "/" + record.getOrders().get(j).getYear() +
-                                    timeString + record.getOrders().get(j).getTime()+" " +record.getOrders().get(j).getStatus());
+                    for (int j = 0; j < recorded.getOrders().size(); j++) {
+                        if (recorded.getCustomers().get(j).equals(customer) && recorded.getType().get(j).equals(1)) {
+                            System.out.println(i++ + ". " + recorded.getOrders().get(j).getDay() + "/" +
+                                    recorded.getOrders().get(j).getMonth() + "/" + recorded.getOrders().get(j).getYear() +
+                                    timeString + recorded.getOrders().get(j).getTime()+" " +recorded.getOrders().get(j).getStatus());
                             appIndex.add(j);
                         }
                     }
@@ -437,7 +437,7 @@ public class MainInterface {
                     System.out.println("Choose New Time:");
                     String newTime = scan.next();
                     String statuss="wating";
-                    validOrder = record.editOrder(record.getOrders().get(index), new Order(newDay, newMonth, newYear, newTime,statuss));
+                    validOrder = recorded.editOrder(recorded.getOrders().get(index), new Order(newDay, newMonth, newYear, newTime,statuss));
 
                     if (validOrder)
                         System.out.println("Edit Order Successfully.\n");
@@ -452,11 +452,11 @@ public class MainInterface {
                     appIndex.clear();
                     System.out.println(orderList);
                     System.out.println(separate2);
-                    for (int j = 0; j < record.getOrders().size(); j++) {
-                        if (record.getCustomers().get(j).equals(customer) && record.getType().get(j).equals(1)) {
-                            System.out.println(i++ + ". " + record.getOrders().get(j).getDay() + "/" +
-                                    record.getOrders().get(j).getMonth() + "/" + record.getOrders().get(j).getYear() +
-                                    timeString + record.getOrders().get(j).getTime() +record.getOrders().get(j).getStatus());
+                    for (int j = 0; j < recorded.getOrders().size(); j++) {
+                        if (recorded.getCustomers().get(j).equals(customer) && recorded.getType().get(j).equals(1)) {
+                            System.out.println(i++ + ". " + recorded.getOrders().get(j).getDay() + "/" +
+                                    recorded.getOrders().get(j).getMonth() + "/" + recorded.getOrders().get(j).getYear() +
+                                    timeString + recorded.getOrders().get(j).getTime() +recorded.getOrders().get(j).getStatus());
                             appIndex.add(j);
                         }
                     }
@@ -472,7 +472,7 @@ public class MainInterface {
                     index = appIndex.get(index);
                     System.out.println();
 
-                    validOrder = record.deleteOrder(record.getOrders().get(index));
+                    validOrder = recorded.deleteOrder(recorded.getOrders().get(index));
 
                     if (validOrder)
                         System.out.println("Delete Order Successfully.\n");
@@ -486,11 +486,11 @@ public class MainInterface {
                     appIndex.clear();
                     System.out.println(orderList);
                     System.out.println(separate2);
-                    for (int j = 0; j < record.getOrders().size(); j++) {
-                        if (record.getCustomers().get(j).equals(customer) && record.getType().get(j).equals(1)) {
-                            System.out.println(i++ + ". " + record.getOrders().get(j).getDay() + "/" +
-                                    record.getOrders().get(j).getMonth() + "/" + record.getOrders().get(j).getYear() +
-                                    timeString + record.getOrders().get(j).getTime() +" "+record.getOrders().get(j).getStatus());
+                    for (int j = 0; j < recorded.getOrders().size(); j++) {
+                        if (recorded.getCustomers().get(j).equals(customer) && recorded.getType().get(j).equals(1)) {
+                            System.out.println(i++ + ". " + recorded.getOrders().get(j).getDay() + "/" +
+                                    recorded.getOrders().get(j).getMonth() + "/" + recorded.getOrders().get(j).getYear() +
+                                    timeString + recorded.getOrders().get(j).getTime() +" "+recorded.getOrders().get(j).getStatus());
                             appIndex.add(j);
                         }
                     }
@@ -561,8 +561,8 @@ public class MainInterface {
                     System.out.println("Customers List:");
                     System.out.println(separate2);
                     i = 1;
-                    for (int j = 0; j < record.getCustomers().size(); j++)
-                        System.out.println(i++ +". " + record.getCustomers().get(j).userName);
+                    for (int j = 0; j < recorded.getCustomers().size(); j++)
+                        System.out.println(i++ +". " + recorded.getCustomers().get(j).userName);
                     System.out.println();
                     System.out.println("\nPlease select a customer:");
                     index = scan.nextInt();
@@ -572,7 +572,7 @@ public class MainInterface {
                     }
                     index--;
                     System.out.println();
-                    Customer customer = record.getCustomers().get(index);
+                    Customer customer = recorded.getCustomers().get(index);
                     Invoice invoice = new Invoice(customer.getSelectedServices(), customer.getWorkerVisit());
                     invoice.printInvoice();
                     customer.getSelectedServices().clear();
@@ -583,8 +583,8 @@ public class MainInterface {
                 case 2:
                     System.out.println("Choose Month:");
                     Integer month = scan.nextInt();
-                    for (int j = 0; j < record.getOrders().size(); j++) {
-                        if (record.getType().get(j) == 2 && (Integer.parseInt(record.getOrders().get(j).getMonth()) == month))
+                    for (int j = 0; j < recorded.getOrders().size(); j++) {
+                        if (recorded.getType().get(j) == 2 && (Integer.parseInt(recorded.getOrders().get(j).getMonth()) == month))
                             numOfVisits++;
                     }
 
