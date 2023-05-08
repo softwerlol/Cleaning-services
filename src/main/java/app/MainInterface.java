@@ -8,7 +8,7 @@ import java.util.logging.*;
 
 public class MainInterface {
     static Logger logger = Logger.getLogger(MainInterface.class.getName());
-    static Logger logg;
+
     static int userIndex;
     private static Scanner scan = new Scanner(System.in);
 
@@ -213,8 +213,11 @@ public class MainInterface {
                     return;
 
                 default:
-                    System.out.println(invalid);
+
+                    logger.log(Level.INFO,invalid);
                     System.out.println();
+
+
                     break;
             }
         }
@@ -226,59 +229,68 @@ public class MainInterface {
             int index;
             ArrayList<Integer> appIndex = new ArrayList<>();
 
-            System.out.println("\t\t\tWelcome W. " + users.get(userIndex).userName);
-            System.out.println(separate);
-            System.out.println("1. Show Customers List");
-            System.out.println("2. Show Order");
-            System.out.println("3. Change Order Status");
-            System.out.println("4. Sign Out");
-            System.out.println(selectOption);
+            logger.log(Level.INFO,"\t\t\tWelcome W. " + users.get(userIndex).userName+"\n");
+
+            logger.log(Level.INFO,separate+"\n");
+            logger.log(Level.INFO,"1. Show Customers List");
+            logger.log(Level.INFO,"2. Show Order");
+            logger.log(Level.INFO,"3. Change Order Status");
+            logger.log(Level.INFO,"4. Sign Out");
+            logger.log(Level.INFO,selectOption+"\n");
             int select = scan.nextInt();
             System.out.println();
 
             switch (select) {
                 case 1:
-                    System.out.println("Customers List:");
-                    System.out.println(separate2);
+
+                    logger.log(Level.INFO,"Customers List:\n");
+                    logger.log(Level.INFO,separate2+"\n");
                     i = 1;
                     appIndex.clear();
                     for (int j = 0; j < recorded.getCustomers().size(); j++)
                         if (recorded.getType().get(j) == 1) {
-                            System.out.println(i++ + ". " + recorded.getCustomers().get(j).userName);
+                            logger.log(Level.INFO,i++ + ". " + recorded.getCustomers().get(j).userName);
                             appIndex.add(j);
                         }
                     if (appIndex.isEmpty()) {
-                        System.out.println("No Customers!\n");
+
+                        logger.log(Level.INFO,"No Customers!\n");
                         break;
                     }
                     System.out.println();
-                    System.out.println("\nPlease select a Customer:");
+                    logger.log(Level.INFO,"\nPlease select a Customer:\n");
                     index = scan.nextInt();
                     if (index > i || index < 1) {
-                        System.out.println(invalid);
+
+                        logger.log(Level.INFO,"invalid"+"\n");
                         break;
                     }
                     index--;
                     index = appIndex.get(index);
                     System.out.println();
-                    System.out.println("\nEnter Cleaning services Fee:");
+                    logger.log(Level.INFO,"\nEnter Cleaning services Fee:\n");
                     recorded.getCustomers().get(index).setWorkerVisit(scan.nextDouble());
                     recorded.addVisit(recorded.getOrders().get(index));
-                    System.out.println("\nDone!\n");
+                    logger.log(Level.INFO,"\nDone!\n");
+
                     break;
 
                 case 4:
-                    System.out.println(logOut);
+
+                    logger.log(Level.INFO,logOut+"\n");
+
                     scan.nextLine();
                     return;
                 case 2:
                     i = 1;
 
-                    System.out.println(orderList);
-                    System.out.println(separate2);
+
+                    logger.log(Level.INFO,orderList+"\n");
+
+                    logger.log(Level.INFO,separate2+"\n");
                     for (int j = 0; j < recorded.getOrders().size(); j++) {
 
-                            System.out.println(i++ + ". " + recorded.getOrders().get(j).getDay()+"/"+
+                        logger.log(Level.INFO,i++ + ". " + recorded.getOrders().get(j).getDay()+"/"+
                                     recorded.getOrders().get(j).getMonth()+"/"+
                                     recorded.getOrders().get(j).getYear()+" "+
                                     recorded.getOrders().get(j).getTime()+"  "+
@@ -292,17 +304,19 @@ public class MainInterface {
                     break;
 
                 default:
-                    System.out.println(invalid);
+
+                    logger.log(Level.INFO,invalid+"\n");
                     System.out.println();
+                    break;
 
                 case 3:
                     i = 1;
 
-                    System.out.println(orderList);
-                    System.out.println(separate2);
+                    logger.log(Level.INFO,orderList+"\n");
+                    logger.log(Level.INFO,separate2+"\n");
                     for (int j = 0; j < recorded.getOrders().size(); j++) {
 
-                            System.out.println(i++ + ". " + recorded.getOrders().get(j).getDay() + "/" +
+                            logger.log(Level.INFO,i++ + ". " + recorded.getOrders().get(j).getDay() + "/" +
                                     recorded.getOrders().get(j).getMonth() + "/" + recorded.getOrders().get(j).getYear() +
                                     timeString + recorded.getOrders().get(j).getTime()  +recorded.getOrders().get(j).getStatus());
 
@@ -310,10 +324,11 @@ public class MainInterface {
                     }
 
                     System.out.println();
-                    System.out.println("\nPlease select an order:");
+                    logger.log(Level.INFO,"\nPlease select an order:");
                     index = scan.nextInt();
                     if (index > i || index < 1) {
-                        System.out.println(invalid);
+
+                        logger.log(Level.INFO,invalid+"\n");
                         break;
                     }
                     index--;
@@ -327,14 +342,16 @@ public class MainInterface {
                     String newYear = recorded.getOrders().get(index).getYear();
 
                     String newTime = recorded.getOrders().get(index).getTime();
-                    System.out.println("Choose New Status:");
+
+                    logger.log(Level.INFO,"Choose New Status:"+"\n");
                     String newstatus = scan.next();
                     boolean validOrder = recorded.editOrder(recorded.getOrders().get(index), new Order(newDay, newMonth, newYear, newTime,newstatus));
 
                     if (validOrder)
-                        System.out.println("Edit Order Successfully.\n");
+
+                    logger.log(Level.INFO,"Edit Order Successfully.\n"+"\n");
                     else
-                        System.out.print(error);
+                        logger.log(Level.INFO,error+"\n");
 
                     break;
 
@@ -349,34 +366,35 @@ public class MainInterface {
             Customer customer = (Customer)users.get(userIndex);
             ArrayList<Integer> appIndex = new ArrayList<>();
 
-            System.out.println(Welcome + users.get(userIndex).userName);
-            System.out.println(separate);
-            System.out.println("1. Add a Service");
-            System.out.println("2. Show Services");
-            System.out.println("3. Add Order");
-            System.out.println("4. Edit Order");
-            System.out.println("5. Delete Order");
-            System.out.println("6. Show Order");
-            System.out.println("7. Your Cost");
-            System.out.println("8. Show email");
-            System.out.println("9. Sign Out");
-            System.out.println(selectOption);
+            logger.log(Level.INFO,Welcome + users.get(userIndex).userName+"\n");
+            logger.log(Level.INFO,separate+"\n");
+            logger.log(Level.INFO,"1. Add a Service"+"\n");
+            logger.log(Level.INFO,"2. Show Services"+"\n");
+            logger.log(Level.INFO,"3. Add Order"+"\n");
+            logger.log(Level.INFO,"4. Edit Order"+"\n");
+            logger.log(Level.INFO,"5. Delete Order"+"\n");
+            logger.log(Level.INFO,"6. Show Order"+"\n");
+            logger.log(Level.INFO,"7. Your Cost"+"\n");
+            logger.log(Level.INFO,"8. Show email"+"\n");
+            logger.log(Level.INFO,"9. Sign Out"+"\n");
+            logger.log(Level.INFO,selectOption+"\n");
             int select = scan.nextInt();
             System.out.println();
 
             switch (select) {
                 case 1:
                     i = 1;
-                    System.out.println("Services List:");
-                    System.out.println(separate2);
+                    logger.log(Level.INFO,"Services List:"+"\n");
+                    logger.log(Level.INFO,separate2+"\n");
                     for (Service service : servicesList) {
-                        System.out.println(i++ + ". " + service);
+                       logger.log(Level.INFO,i++ + ". " + service);
                     }
                     System.out.println();
-                    System.out.println("\nPlease select a service:");
+                    logger.log(Level.INFO,"\nPlease select a service:"+"\n");
                     index = scan.nextInt();
                     if (index > i || index < 1) {
-                        System.out.println(invalid);
+
+                        logger.log(Level.INFO,invalid+"\n");
                         break;
                     }
                     index--;
@@ -384,46 +402,48 @@ public class MainInterface {
                     if (servicesList.get(index).getQuantity() != 0) {
                         servicesList.get(index).removeQuantity();
                         customer.getSelectedServices().add(servicesList.get(index));
-                        System.out.println(Done);
+
+                        logger.log(Level.INFO,Done+"\n");
                     }
                     else
-                        System.out.println("This service is not available!\n");
+                    logger.log(Level.INFO,"This service is not available!\n"+"\n");
 
                     break;
 
                 case 2:
                     i = 1;
                     for (Service service : customer.getSelectedServices()) {
-                        System.out.println(i++ + ". " + service);
+                        logger.log(Level.INFO,i++ + ". " + service);
                     }
                     System.out.println();
                     break;
 
                 case 3:
-                    System.out.println("Choose Day:");
+                    logger.log(Level.INFO,"Choose Day:"+"\n");
                     String day = scan.next();
-                    System.out.println("Choose Month:");
+                    logger.log(Level.INFO,"Choose Month:"+"\n");
                     String month = scan.next();
-                    System.out.println("Choose Year:");
+                    logger.log(Level.INFO,"Choose Year:"+"\n");
                     String year = scan.next();
-                    System.out.println("Choose Time:");
+                    logger.log(Level.INFO,"Choose Time:"+"\n");
                     String time = scan.next();
                     String status ="wating";
                     boolean validOrder = recorded.addOrder(new Order(day, month, year, time,status), customer);
                     if (validOrder)
-                        System.out.println("Add Order Successfully.\n");
+
+                    logger.log(Level.INFO,"Add Order Successfully.\n"+"\n");
                     else
-                        System.out.print(error);
+                    logger.log(Level.INFO,error+"\n");
                     break;
 
                 case 4:
                     i = 1;
                     appIndex.clear();
-                    System.out.println(orderList);
-                    System.out.println(separate2);
+                    logger.log(Level.INFO,orderList+"\n");
+                    logger.log(Level.INFO,separate2+"\n");
                     for (int j = 0; j < recorded.getOrders().size(); j++) {
                         if (recorded.getCustomers().get(j).equals(customer) && recorded.getType().get(j).equals(1)) {
-                            System.out.println(i++ + ". " + recorded.getOrders().get(j).getDay() + "/" +
+                            logger.log(Level.INFO,i++ + ". " + recorded.getOrders().get(j).getDay() + "/" +
                                     recorded.getOrders().get(j).getMonth() + "/" + recorded.getOrders().get(j).getYear() +
                                     timeString + recorded.getOrders().get(j).getTime()+" " +recorded.getOrders().get(j).getStatus());
                             appIndex.add(j);
@@ -431,42 +451,43 @@ public class MainInterface {
                     }
 
                     System.out.println();
-                    System.out.println("\nPlease select an order:");
+                    logger.log(Level.INFO,"\nPlease select an order:"+"\n");
                     index = scan.nextInt();
                     if (index > i || index < 1) {
-                        System.out.println(invalid);
+                        logger.log(Level.INFO,invalid+"\n");
                         break;
                     }
                     index--;
                     index = appIndex.get(index);
                     System.out.println();
-                    System.out.println("Choose New Day:");
+                    logger.log(Level.INFO,"Choose New Day:"+"\n");
                     String newDay = scan.next();
-                    System.out.println("Choose New Month:");
+                    logger.log(Level.INFO,"Choose New Month:"+"\n");
                     String newMonth = scan.next();
-                    System.out.println("Choose New Year:");
+                    logger.log(Level.INFO,"Choose New Year:"+"\n");
                     String newYear = scan.next();
-                    System.out.println("Choose New Time:");
+                    logger.log(Level.INFO,"Choose New Time:"+"\n");
                     String newTime = scan.next();
                     String statuss="wating";
                     validOrder = recorded.editOrder(recorded.getOrders().get(index), new Order(newDay, newMonth, newYear, newTime,statuss));
 
                     if (validOrder)
-                        System.out.println("Edit Order Successfully.\n");
-                    else
-                        System.out.print(error);
 
+                    logger.log(Level.INFO,"Edit Order Successfully.\n"+"\n");
+                    else
+
+                    logger.log(Level.INFO,error+"\n");
                     break;
 
 
                 case 5:
                     i = 1;
                     appIndex.clear();
-                    System.out.println(orderList);
-                    System.out.println(separate2);
+                    logger.log(Level.INFO,orderList+"\n");
+                    logger.log(Level.INFO,separate2+"\n");
                     for (int j = 0; j < recorded.getOrders().size(); j++) {
                         if (recorded.getCustomers().get(j).equals(customer) && recorded.getType().get(j).equals(1)) {
-                            System.out.println(i++ + ". " + recorded.getOrders().get(j).getDay() + "/" +
+                            logger.log(Level.INFO,i++ + ". " + recorded.getOrders().get(j).getDay() + "/" +
                                     recorded.getOrders().get(j).getMonth() + "/" + recorded.getOrders().get(j).getYear() +
                                     timeString + recorded.getOrders().get(j).getTime() +recorded.getOrders().get(j).getStatus());
                             appIndex.add(j);
@@ -474,10 +495,10 @@ public class MainInterface {
                     }
 
                     System.out.println();
-                    System.out.println("\nPlease select an order:");
+                    logger.log(Level.INFO,"\nPlease select an order:"+"\n");
                     index = scan.nextInt();
                     if (index > i || index < 1) {
-                        System.out.println(invalid);
+                        logger.log(Level.INFO,invalid+"\n");
                         break;
                     }
                     index--;
@@ -487,20 +508,21 @@ public class MainInterface {
                     validOrder = recorded.deleteOrder(recorded.getOrders().get(index));
 
                     if (validOrder)
-                        System.out.println("Delete Order Successfully.\n");
+
+                    logger.log(Level.INFO,"Delete Order Successfully.\n"+"\n");
                     else
-                        System.out.print(error);
+                    logger.log(Level.INFO,error+"\n");
 
                     break;
 
                 case 6:
                     i = 1;
                     appIndex.clear();
-                    System.out.println(orderList);
-                    System.out.println(separate2);
+                    logger.log(Level.INFO,orderList+"\n");
+                    logger.log(Level.INFO,separate2+"\n");
                     for (int j = 0; j < recorded.getOrders().size(); j++) {
                         if (recorded.getCustomers().get(j).equals(customer) && recorded.getType().get(j).equals(1)) {
-                            System.out.println(i++ + ". " + recorded.getOrders().get(j).getDay() + "/" +
+                            logger.log(Level.INFO,i++ + ". " + recorded.getOrders().get(j).getDay() + "/" +
                                     recorded.getOrders().get(j).getMonth() + "/" + recorded.getOrders().get(j).getYear() +
                                     timeString + recorded.getOrders().get(j).getTime() +" "+recorded.getOrders().get(j).getStatus());
                             appIndex.add(j);
@@ -527,26 +549,25 @@ public class MainInterface {
                         price = price- (price*20/100);
                     else
                         price=price1;
-
-                    System.out.println("Your Total Price "+price1);
-                    System.out.println("Your Total Price after dicount  "+(price));
-                    //***********************************************
+                    logger.log(Level.INFO,"Your Total Price "+price1+"\n");
+                    logger.log(Level.INFO,"Your Total Price after dicount  "+(price)+"\n");
                     System.out.println();
                     break;
                 case 8:
                 	if(email.get(0).equals(""))
-                		System.out.println("You Dont have any email");
+                    logger.log(Level.INFO,"You Dont have any email"+"\n");
                 	else
-                	System.out.println("You have an email \n"+ email.get(0));
+                        logger.log(Level.INFO,"You have an email \n"+ email.get(0)+"\n");
                     break;
                 case 9:
-                    System.out.println(logOut);
+                    logger.log(Level.INFO,logOut+"\n");
                     scan.nextLine();
                     return;
 
                 default:
-                    System.out.println(invalid);
+                    logger.log(Level.INFO,invalid+"\n");
                     System.out.println();
+                    break;
             }
         }
     }
