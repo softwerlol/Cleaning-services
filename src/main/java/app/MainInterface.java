@@ -12,7 +12,8 @@ public class MainInterface {
     private static Scanner scan = new Scanner(System.in);
 
     private static ArrayList<Users> users = new ArrayList<>();
-    private static String userName, password;
+    private static String userName;
+    private static String password;
 
     private static Record record = new Record();
     static ArrayList<Service> servicesList = new ArrayList<Service>();
