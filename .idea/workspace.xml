@@ -6,26 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="209daf62-714a-403c-ae7f-dee4fbe5f6c9" name="Changes" comment="final-test&#10;&#10;Signed-off-by: Ahmed Hussein &lt;ahmadqasemtech11@gmail.com&gt;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Report.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Services.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/SignIn.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/SignOut.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Visit.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/addOrder.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app/Admin.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app/Customer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app/Invoice.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app/MainInterface.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app/Order.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app/Record.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app/Report.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app/Secretary.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app/Service.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app/Users.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app/Worker.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/deleteOrder.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/editOrder.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/invoice.feature" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -403,7 +383,14 @@
       <option name="project" value="LOCAL؜" />
       <updated>1679661396386</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL؜-٠٠٠١٤" summary="final-test&#10;&#10;Signed-off-by: Ahmed Hussein &lt;ahmadqasemtech11@gmail.com&gt;">
+      <created>1683564511792</created>
+      <option name="number" value="٠٠٠١٤" />
+      <option name="presentableId" value="LOCAL؜-٠٠٠١٤" />
+      <option name="project" value="LOCAL؜" />
+      <updated>1683564511792</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
