@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="209daf62-714a-403c-ae7f-dee4fbe5f6c9" name="Changes" comment="small edit&#10;&#10;Signed-off-by: Ahmed Hussein &lt;ahmadqasemtech11@gmail.com&gt;">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="209daf62-714a-403c-ae7f-dee4fbe5f6c9" name="Changes" comment="edit1&#10;&#10;Signed-off-by: Ahmed Hussein &lt;ahmadqasemtech11@gmail.com&gt;" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,6 +20,19 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="Ahmad" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
     <option name="PUSH_TAGS">
       <GitPushTagMode>
         <option name="argument" value="--tags" />
@@ -50,6 +61,9 @@
         <option name="url" value="https://github.com/Ahmed-Hussein353/Cleaning-services" />
       </UrlAndAccount>
     </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/app/MainInterface.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -292,7 +306,7 @@
       <workItem from="1682521446176" duration="1000" />
       <workItem from="1683326278365" duration="371000" />
       <workItem from="1683577897376" duration="1477000" />
-      <workItem from="1683657445333" duration="4995000" />
+      <workItem from="1683657445333" duration="7197000" />
     </task>
     <task id="LOCAL؜-٠٠٠٠١" summary="test">
       <created>1677948720062</created>
@@ -455,7 +469,56 @@
       <option name="project" value="LOCAL؜" />
       <updated>1683662393246</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL؜-٠٠٠٢٤" summary="edit&#10;&#10;Signed-off-by: Ahmed Hussein &lt;ahmadqasemtech11@gmail.com&gt;">
+      <created>1683663386052</created>
+      <option name="number" value="٠٠٠٢٤" />
+      <option name="presentableId" value="LOCAL؜-٠٠٠٢٤" />
+      <option name="project" value="LOCAL؜" />
+      <updated>1683663386052</updated>
+    </task>
+    <task id="LOCAL؜-٠٠٠٢٥" summary="edit&#10;&#10;Signed-off-by: Ahmed Hussein &lt;ahmadqasemtech11@gmail.com&gt;">
+      <created>1683663474665</created>
+      <option name="number" value="٠٠٠٢٥" />
+      <option name="presentableId" value="LOCAL؜-٠٠٠٢٥" />
+      <option name="project" value="LOCAL؜" />
+      <updated>1683663474665</updated>
+    </task>
+    <task id="LOCAL؜-٠٠٠٢٦" summary="edit&#10;&#10;Signed-off-by: Ahmed Hussein &lt;ahmadqasemtech11@gmail.com&gt;">
+      <created>1683663545274</created>
+      <option name="number" value="٠٠٠٢٦" />
+      <option name="presentableId" value="LOCAL؜-٠٠٠٢٦" />
+      <option name="project" value="LOCAL؜" />
+      <updated>1683663545274</updated>
+    </task>
+    <task id="LOCAL؜-٠٠٠٢٧" summary="edit&#10;&#10;Signed-off-by: Ahmed Hussein &lt;ahmadqasemtech11@gmail.com&gt;">
+      <created>1683663571150</created>
+      <option name="number" value="٠٠٠٢٧" />
+      <option name="presentableId" value="LOCAL؜-٠٠٠٢٧" />
+      <option name="project" value="LOCAL؜" />
+      <updated>1683663571150</updated>
+    </task>
+    <task id="LOCAL؜-٠٠٠٢٨" summary="edit1">
+      <created>1683665267383</created>
+      <option name="number" value="٠٠٠٢٨" />
+      <option name="presentableId" value="LOCAL؜-٠٠٠٢٨" />
+      <option name="project" value="LOCAL؜" />
+      <updated>1683665267383</updated>
+    </task>
+    <task id="LOCAL؜-٠٠٠٢٩" summary="edit1&#10;&#10;Signed-off-by: Ahmed Hussein &lt;ahmadqasemtech11@gmail.com&gt;">
+      <created>1683665278949</created>
+      <option name="number" value="٠٠٠٢٩" />
+      <option name="presentableId" value="LOCAL؜-٠٠٠٢٩" />
+      <option name="project" value="LOCAL؜" />
+      <updated>1683665278949</updated>
+    </task>
+    <task id="LOCAL؜-٠٠٠٣٠" summary="edit1&#10;&#10;Signed-off-by: Ahmed Hussein &lt;ahmadqasemtech11@gmail.com&gt;">
+      <created>1683665308445</created>
+      <option name="number" value="٠٠٠٣٠" />
+      <option name="presentableId" value="LOCAL؜-٠٠٠٣٠" />
+      <option name="project" value="LOCAL؜" />
+      <updated>1683665308445</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -578,7 +641,10 @@
     <MESSAGE value="final-test&#10;&#10;Signed-off-by: Ahmed Hussein &lt;ahmadqasemtech11@gmail.com&gt;" />
     <MESSAGE value="small edit" />
     <MESSAGE value="small edit&#10;&#10;Signed-off-by: Ahmed Hussein &lt;ahmadqasemtech11@gmail.com&gt;" />
-    <option name="LAST_COMMIT_MESSAGE" value="small edit&#10;&#10;Signed-off-by: Ahmed Hussein &lt;ahmadqasemtech11@gmail.com&gt;" />
+    <MESSAGE value="edit&#10;&#10;Signed-off-by: Ahmed Hussein &lt;ahmadqasemtech11@gmail.com&gt;" />
+    <MESSAGE value="edit1" />
+    <MESSAGE value="edit1&#10;&#10;Signed-off-by: Ahmed Hussein &lt;ahmadqasemtech11@gmail.com&gt;" />
+    <option name="LAST_COMMIT_MESSAGE" value="edit1&#10;&#10;Signed-off-by: Ahmed Hussein &lt;ahmadqasemtech11@gmail.com&gt;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
