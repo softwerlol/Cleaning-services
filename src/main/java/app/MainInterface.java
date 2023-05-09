@@ -21,7 +21,7 @@ public class MainInterface {
     ArrayList<Service> selectedServices = new ArrayList<Service>();
     static ArrayList<String> email = new ArrayList<String>();
 
-    static String admin = "Admin";
+    static String admin = "admin";
     static String worker = "Worker";
     static String customer = "Customer";
     static String secretary = "Secretary";
